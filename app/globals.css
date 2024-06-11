@@ -4,6 +4,10 @@
 
 :root {
   --header-height: 80px;
+
+  @media (min-width: 768px) {
+    --header-height: 100px;
+  }
 }
 
 @layer utilities {
@@ -15,9 +19,22 @@
     text-fill-color: transparent;
   }
 
-
   .h1-clamp {
-    font-size: clamp(1.5rem, 5vw, 5.5rem);  
+    font-size: clamp(2.5rem, 8vw + 1rem, 15.5rem);
+    line-height: 1.1;
+  }
+
+  .subtitle-clamp {
+    font-size: clamp(16px, 3vw + 1px, 20px);
+  }
+
+  .text {
+    fill: white;
+    transform-origin: 50% 50%;
+  }
+
+  #curve {
+    fill: transparent;
   }
 }
 

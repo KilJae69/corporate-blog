@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="absolute top-0 z-50 flex h-header-height w-full  items-center justify-between bg-transparent px-5 py-2.5">
+    <header className="absolute top-0 z-50 mx-auto flex h-header-height w-full max-w-[2400px]  items-center justify-between bg-transparent px-5 py-2.5">
       <Logo />
       <div className="flex items-center gap-5">
         <div className="block xl:hidden">

@@ -29,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.className} h-[1000px] bg-gray-50`}>
+      <body
+        className={`${outfit.className} mx-auto h-[9000px] max-w-[2400px] bg-gray-50`}
+      >
         <Header />
         <MobileNavbar />
         {children}
