@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FaPaperPlane } from "react-icons/fa6";
 import { Separator } from "./ui/separator";
-import SocialLinks from "./SocialLinks";
+import SocialLinks from "./social-links";
 import { navbarLinks } from "@/constants/data";
 import Link from "next/link";
 
@@ -14,6 +14,7 @@ const Footer = () => {
             className="object-cover"
             src="/images/footer-image-1.avif"
             fill
+            sizes="(max-width:479px) 50vw, (max-width:767px) 33vw, 20vw"
             alt="image"
           />
         </div>
@@ -22,6 +23,7 @@ const Footer = () => {
             className="object-cover"
             src="/images/footer-image-2.avif"
             fill
+            sizes="(max-width:479px) 50vw, (max-width:767px) 33vw, 20vw"
             alt="image"
           />
         </div>
@@ -30,6 +32,7 @@ const Footer = () => {
             className="object-cover"
             src="/images/footer-image-3.avif"
             fill
+            sizes="(max-width:479px) 50vw, (max-width:767px) 33vw, 20vw"
             alt="image"
           />
         </div>
@@ -38,6 +41,7 @@ const Footer = () => {
             className="object-cover"
             src="/images/footer-image-4.avif"
             fill
+            sizes="(max-width:479px) 50vw, (max-width:767px) 33vw, 20vw"
             alt="image"
           />
         </div>
@@ -46,6 +50,7 @@ const Footer = () => {
             className="object-cover"
             src="/images/footer-image-5.avif"
             fill
+            sizes="(max-width:479px) 50vw, (max-width:767px) 33vw, 20vw"
             alt="image"
           />
         </div>
@@ -54,6 +59,7 @@ const Footer = () => {
             className="object-cover"
             src="/images/footer-image-6.avif"
             fill
+            sizes="(max-width:479px) 50vw, (max-width:767px) 33vw, 20vw"
             alt="image"
           />
         </div>
@@ -61,7 +67,7 @@ const Footer = () => {
 
       <div className="mx-auto max-w-7xl px-3">
         <div className="mx-auto mt-[70px] flex max-w-[600px] flex-col items-center gap-5 ">
-          <div className="flex size-10 items-center justify-center rounded-full bg-[#ff472b]">
+          <div className="flex size-10 items-center justify-center rounded-full bg-primary">
             <FaPaperPlane className="size-5 translate-x-[-2px] text-white" />
           </div>
           <p className="text-center text-xl font-semibold text-white">
@@ -73,9 +79,9 @@ const Footer = () => {
               placeholder="Enter your email address"
               className="w-full flex-1 bg-[#232323] p-4 text-white outline-none focus:bg-[#232323]/50 active:bg-[#232323]/50"
             />
-            <button className="group relative flex min-h-14 max-w-[155px] items-center justify-center gap-2 bg-[#232323] px-5 uppercase text-white transition-all hover:text-[#ff472b] ">
+            <button className="group relative flex min-h-14 max-w-[155px] items-center justify-center gap-2 bg-[#232323] px-5 uppercase text-white transition-all hover:text-primary ">
               <span className="absolute left-0 h-4/5 w-px bg-[#2b2b2b] " />
-              <FaPaperPlane className="size-3 text-white transition-all group-hover:text-[#ff472b]" />
+              <FaPaperPlane className="size-3 text-white transition-all group-hover:text-primary" />
               Subscribe
             </button>
           </div>

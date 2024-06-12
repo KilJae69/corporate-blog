@@ -28,6 +28,10 @@
     font-size: clamp(16px, 3vw + 1px, 20px);
   }
 
+  .text-clamp {
+    font-size: clamp(26px, 5vw + 1px, 57px);
+  }
+
   .text {
     fill: white;
     transform-origin: 50% 50%;
@@ -65,4 +69,19 @@
 
 .reverse-spin-animation {
   animation: reverse-spin 0.5s forwards;
+}
+
+// ## Marquee animation
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.marquee-animate {
+  
+  animation: marquee 10s linear infinite;
 }

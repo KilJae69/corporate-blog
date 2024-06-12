@@ -1,13 +1,13 @@
 "use client";
 import { navbarLinks } from "@/constants/data";
-import Logo from "./Logo";
-import MobileNavbarToggle from "./MobileNavbarToggle";
+import Logo from "./logo";
+import MobileNavbarToggle from "./mobile-navbar-toggle";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 import { Separator } from "./ui/separator";
 import useNavbarStore from "@/hooks/store/useNavbarStore";
-import SocialLinks from "./SocialLinks";
+import SocialLinks from "./social-links";
 
 export default function MobileNavbar() {
   const { isNavbarOpen } = useNavbarStore();
@@ -43,7 +43,6 @@ export default function MobileNavbar() {
       <Separator className="mt-10 h-px bg-[#b7b9bd]/40" />
       <div className="mt-6">
         <SocialLinks />
-      
       </div>
     </div>
   );

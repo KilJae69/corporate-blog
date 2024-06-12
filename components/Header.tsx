@@ -1,7 +1,7 @@
 import { navbarLinks } from "@/constants/data";
-import ContactUsButton from "./ContactUsButton";
-import Logo from "./Logo";
-import MobileNavbarToggle from "./MobileNavbarToggle";
+import ContactUsButton from "./contact-us-button";
+import Logo from "./logo";
+import MobileNavbarToggle from "./mobile-navbar-toggle";
 import Link from "next/link";
 
 export default function Header() {

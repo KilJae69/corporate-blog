@@ -16,6 +16,7 @@ const config = {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
+      "2xl": "1536px",
     },
     backgroundImage: {
       hero: "url(/images/hero-bg.avif)",
@@ -29,6 +30,10 @@ const config = {
       },
     },
     extend: {
+      colors:{
+        primary: "#ffb039"
+        
+      },
       spacing: {
         "header-height": "var(--header-height)",
       },
@@ -44,8 +49,8 @@ const config = {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "accordion-down": "accordion-down 0.5s ease-out",
+        "accordion-up": "accordion-up 0.5s ease-out",
         "spin-slow": "spin 5s linear infinite",
       },
     },
