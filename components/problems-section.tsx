@@ -27,7 +27,7 @@ export default function ProblemsSection() {
           <Accordion type="single" className="" collapsible>
             {problemsData.map((problem) => (
               <AccordionItem key={problem.id} value={`item-${problem.id}`}>
-                <AccordionTrigger className="gap-3 text-start data-[state=open]:text-primary xl:text-xl">
+                <AccordionTrigger className="gap-3 text-start hover:text-primary data-[state=open]:text-primary xl:text-xl">
                   {problem.title}
                 </AccordionTrigger>
                 <AccordionContent className="relative max-w-[95%] text-sm leading-6 tracking-wider text-black/50 xl:text-lg">
@@ -39,8 +39,11 @@ export default function ProblemsSection() {
         </div>
       </div>
 
-      <div className="overflow-hidden whitespace-nowrap">
-        <span className="marquee-animate inline-block">
+      <div className="mt-10 overflow-hidden whitespace-nowrap">
+        <span className="inline-block animate-marquee select-none pl-20 text-7xl font-thin text-[#d3dce0] md:text-[200px]">
+          We help realize business ideas
+        </span>
+        <span className="inline-block animate-marquee select-none pl-20 text-7xl font-thin text-[#d3dce0] md:text-[200px]">
           We help realize business ideas
         </span>
       </div>

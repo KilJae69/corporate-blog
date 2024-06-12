@@ -71,17 +71,4 @@
   animation: reverse-spin 0.5s forwards;
 }
 
-// ## Marquee animation
 
-@keyframes marquee {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-.marquee-animate {
-  
-  animation: marquee 10s linear infinite;
-}

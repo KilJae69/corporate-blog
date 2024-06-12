@@ -95,3 +95,30 @@ export const problemsData = [
       "We develop customized technology solutions that enable scalable team growth, including cloud-based collaboration tools, remote work infrastructure, and efficient onboarding processes to support your expanding workforce.",
   },
 ] as const;
+
+export const testimonialsData = [
+  {
+    id: 1,
+    quote:
+      "We needed help with the launch of the new digital platform. It went better than expected!",
+    fullName: "Nelly Flatcher",
+    tag: "Client",
+    imageUrl: "/images/client-1.jpg",
+  },
+  {
+    id: 2,
+    quote:
+      "Unmatched expertise and an impressive portfolio. Working with TERIC is always a pleasure.",
+    fullName: "Patrick Dyson",
+    tag: "Client",
+    imageUrl: "/images/client-2.jpg",
+  },
+  {
+    id: 3,
+    quote:
+      "TERIC can provide that final push your project desperately needs. Enjoyed our collaboration!",
+    fullName: "Ellen Williams",
+    tag: "Client",
+    imageUrl: "/images/client-3.jpg",
+  },
+] as const;

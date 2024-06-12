@@ -30,9 +30,8 @@ const config = {
       },
     },
     extend: {
-      colors:{
-        primary: "#ffb039"
-        
+      colors: {
+        primary: "#ffb039",
       },
       spacing: {
         "header-height": "var(--header-height)",
@@ -47,8 +46,13 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
+        marquee: "marquee 25s linear infinite",
         "accordion-down": "accordion-down 0.5s ease-out",
         "accordion-up": "accordion-up 0.5s ease-out",
         "spin-slow": "spin 5s linear infinite",
