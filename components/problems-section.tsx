@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import MarqueeBanner from "./shared/marquee-banner";
 
 export default function ProblemsSection() {
   return (
@@ -39,14 +40,7 @@ export default function ProblemsSection() {
         </div>
       </div>
 
-      <div className="mt-10 overflow-hidden whitespace-nowrap">
-        <span className="inline-block animate-marquee select-none pl-20 text-7xl font-thin text-[#d3dce0] md:text-[200px]">
-          We help realize business ideas
-        </span>
-        <span className="inline-block animate-marquee select-none pl-20 text-7xl font-thin text-[#d3dce0] md:text-[200px]">
-          We help realize business ideas
-        </span>
-      </div>
+      <MarqueeBanner />
     </section>
   );
 }

@@ -11,7 +11,7 @@ export default function WhatWeDoSection() {
           <h2 className="text-xs uppercase text-white md:text-lg xl:text-xl">
             What we do
           </h2>
-          <p className="text-clamp  leading-7 md:max-w-[50%] md:leading-10 xl:leading-[1.2]">
+          <p className="text-clamp-lg  leading-7 md:max-w-[50%] md:leading-10 xl:leading-[1.2]">
             <span className="gradient-text">Constantly coming</span>{" "}
             <span className="gradient-text">up with new creative ideas</span>
           </p>
@@ -65,7 +65,7 @@ export default function WhatWeDoSection() {
         </div>
       </div>
 
-      <div className="grid justify-items-center gap-5 pb-20 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="container grid justify-items-center gap-5 pb-20 sm:grid-cols-2 xl:grid-cols-4">
         {servicesData.map((service) => (
           <React.Fragment key={service.id}>
             <AboutUsCard

@@ -31,11 +31,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.className} mx-auto max-w-[2400px] bg-gray-50`}
+        className={`${outfit.className} `}
       >
+
         <Header />
         <MobileNavbar />
+        <main className="">
         {children}
+        </main>
         <Footer />
       </body>
     </html>

@@ -11,6 +11,7 @@ export const navbarLinks = [
   },
   { id: 3, title: "Resources", href: "/resources" },
   { id: 4, title: "Blog", href: "/blog" },
+  { id: 5, title: "Contact Us", href: "/contact" },
 ] as const;
 
 export const servicesData = [

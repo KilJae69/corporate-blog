@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-[#16202a] px-5 pb-20 pt-10">
+    <section className="bg-[#16202a] px-5 pb-20 pt-10 lg:pt-20 xl:pt-40">
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-10 text-xs font-bold uppercase text-white md:text-lg xl:text-xl">
           Client Testimonials
@@ -27,10 +27,10 @@ export default function TestimonialsSection() {
             <CarouselContent className="w-full">
               {testimonialsData.map((testimonial) => (
                 <CarouselItem
-                  className="flex flex-col items-center gap-5 md:gap-10"
+                  className="flex flex-col items-center gap-5 text-center md:gap-10"
                   key={testimonial.id}
                 >
-                  <h3 className="text-clamp text-white">{testimonial.quote}</h3>
+                  <h3 className="text-clamp-lg text-white">{testimonial.quote}</h3>
                   <div className="flex items-center gap-3">
                     <Image
                       src={testimonial.imageUrl}
@@ -53,11 +53,11 @@ export default function TestimonialsSection() {
             </CarouselContent>
             <CarouselPrevious
               variant="ghost"
-              className="size-14  text-white hover:text-primary"
+              className="-left-3 size-6 text-white hover:text-primary sm:left-0 sm:size-14"
             />
             <CarouselNext
               variant="ghost"
-              className="size-14  text-white hover:text-primary"
+              className="-right-3 size-6 text-white hover:text-primary sm:right-0 sm:size-14"
             />
           </Carousel>
         </div>

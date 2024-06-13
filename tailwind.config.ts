@@ -17,6 +17,7 @@ const config = {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
+      " max-xl": "2400px",
     },
     backgroundImage: {
       hero: "url(/images/hero-bg.avif)",
@@ -26,7 +27,7 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "max-xl": "2400px",
       },
     },
     extend: {
@@ -47,8 +48,20 @@ const config = {
           to: { height: "0" },
         },
         marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        grow: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.09)" },
+        },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          " 100%": { opacity: "1" },
+        },
+        fadeOut: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
         },
       },
       animation: {
@@ -56,6 +69,9 @@ const config = {
         "accordion-down": "accordion-down 0.5s ease-out",
         "accordion-up": "accordion-up 0.5s ease-out",
         "spin-slow": "spin 5s linear infinite",
+        grow: "grow 20s ease-in-out infinite",
+        fadeIn: "fadeIn 2s ease-in-out forwards",
+        fadeOut: "fadeOut 2s ease-in-out forwards",
       },
     },
   },

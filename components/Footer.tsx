@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FaPaperPlane } from "react-icons/fa6";
 import { Separator } from "./ui/separator";
-import SocialLinks from "./social-links";
+import SocialLinks from "./shared/social-links";
 import { navbarLinks } from "@/constants/data";
 import Link from "next/link";
 
@@ -96,7 +96,7 @@ const Footer = () => {
             <ul className="flex gap-5 font-semibold ">
               {navbarLinks.map((link) => (
                 <li
-                  className="text-white transition-colors hover:text-[#ff472b]"
+                  className="text-white transition-colors hover:text-primary"
                   key={link.id}
                 >
                   <Link href={link.href}>{link.title}</Link>

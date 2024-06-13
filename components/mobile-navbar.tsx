@@ -1,13 +1,13 @@
 "use client";
 import { navbarLinks } from "@/constants/data";
-import Logo from "./logo";
+import Logo from "./shared/logo";
 import MobileNavbarToggle from "./mobile-navbar-toggle";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 import { Separator } from "./ui/separator";
 import useNavbarStore from "@/hooks/store/useNavbarStore";
-import SocialLinks from "./social-links";
+import SocialLinks from "./shared/social-links";
 
 export default function MobileNavbar() {
   const { isNavbarOpen } = useNavbarStore();
