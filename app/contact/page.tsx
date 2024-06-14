@@ -13,7 +13,7 @@ export default function ContactPage() {
     <section className="bg-[#f4f8fa] px-4 pb-24 pt-[calc(50px+var(--header-height))] md:px-10 md:pb-44 md:pt-56">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-9 md:flex-row md:gap-14">
         <div className="mx-auto w-full max-w-2xl">
-          <ContactForm />
+          <ContactForm formTitle="Contact Form" />
         </div>
         <div className="flex flex-col gap-5 md:gap-8">
           <h1 className="text-xs font-semibold uppercase text-[#16202a] md:text-lg xl:text-xl">

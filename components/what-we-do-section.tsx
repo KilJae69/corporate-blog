@@ -5,7 +5,7 @@ import React from "react";
 
 export default function WhatWeDoSection() {
   return (
-    <section className=" bg-[#16202a] px-6 pt-12 text-[#ccd1d9] ">
+    <section className=" bg-[#16202a] px-4 pt-12 text-[#ccd1d9] ">
       <div className="mx-auto flex max-w-7xl flex-col gap-5 md:gap-8 xl:gap-20">
         <div className="flex flex-col gap-5">
           <h2 className="text-xs uppercase text-white md:text-lg xl:text-xl">
@@ -65,7 +65,7 @@ export default function WhatWeDoSection() {
         </div>
       </div>
 
-      <div className="container grid justify-items-center gap-5 pb-20 sm:grid-cols-2 xl:grid-cols-4">
+      <div className=" grid justify-items-center gap-5 pb-20 xl:container sm:grid-cols-2 xl:grid-cols-4">
         {servicesData.map((service) => (
           <React.Fragment key={service.id}>
             <AboutUsCard

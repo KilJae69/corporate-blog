@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-[#16202a] px-5 pb-20 pt-10 lg:pt-20 xl:pt-40">
+    <section className="bg-[#16202a] px-4 pb-20 pt-10 lg:pt-20 xl:pt-40">
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-10 text-xs font-bold uppercase text-white md:text-lg xl:text-xl">
           Client Testimonials

@@ -1,8 +1,11 @@
-import ContactUsButton from "@/components/shared/contact-us-button";
+
+
 import MarqueeBanner from "@/components/shared/marquee-banner";
+import PrimaryLinkButton from "@/components/shared/primary-link-button";
+import TeamCard from "@/components/team-card";
+import { teamData } from "@/constants/data";
 import { Metadata } from "next";
 import Image from "next/image";
-import { FaLinkedin } from "react-icons/fa6";
 
 export const metadata: Metadata = {
   title: "About",
@@ -13,7 +16,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-[#f4f8fa] px-4 pb-10 pt-[calc(50px+var(--header-height))] md:px-10 md:pb-32 md:pt-56">
+      <section className="bg-[#f4f8fa] px-4 pt-[calc(50px+var(--header-height))] md:px-10 md:pt-56">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:gap-14">
           <h1 className="sr-only">About our company and our team</h1>
           <div className="relative aspect-video size-full md:md:aspect-[10/14] md:w-1/2">
@@ -42,11 +45,11 @@ export default function AboutPage() {
               collaborative discussion. We know an open mind and multiple view
               points lead to the best results. Together we can leap forward.
             </p>
-            <ContactUsButton variant="primary" label="Get in Touch" />
+            <PrimaryLinkButton variant="primary" href="/contact" label="Get in Touch" />
           </div>
         </div>
-        <MarqueeBanner />
       </section>
+      <MarqueeBanner />
       <section className="bg-[#f4f8fa] px-4 pb-24  md:px-10 md:pb-44 ">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 md:gap-14">
           <h2 className="text-xs font-semibold uppercase text-[#16202a] md:text-lg xl:text-xl">
@@ -56,49 +59,16 @@ export default function AboutPage() {
             Technology leadership, strategic vision, and process improvement
           </span>
           <div className="flex flex-col items-center gap-10 sm:flex-row sm:justify-center">
-            <div className="flex w-full max-w-xl flex-col gap-3">
-              <div className="relative aspect-square size-full">
-                <Image
-                  className="object-cover"
-                  src={"/images/ceo-image.png"}
-                  fill
-                  alt="CEO Image"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-[#16202a]">
-                Ryan Seifert
-              </h3>
-              <span className="text-lg text-[#5a5a67]">CEO</span>
-              <a
-                target="__blank"
-                href="https://www.linkedin.com/in/ryangregoryseifert/"
-              >
-                <span className="sr-only">Link to CEO LinkedIn profile</span>
-                <FaLinkedin className="size-9 cursor-pointer transition-colors hover:text-primary" />
-              </a>
-            </div>
-
-            <div className="flex w-full max-w-xl flex-col gap-3">
-              <div className="relative aspect-square size-full">
-                <Image
-                  className="object-cover"
-                  src={"/images/coo-image.png"}
-                  fill
-                  alt="CEO Image"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-[#16202a]">
-                Mike Nydell
-              </h3>
-              <span className="text-lg text-[#5a5a67]">COO</span>
-              <a
-                href="https://www.linkedin.com/in/mikenydell/"
-                target="__blank"
-              >
-                <span className="sr-only">Link to COO LinkedIn profile</span>
-                <FaLinkedin className="size-9 cursor-pointer transition-colors hover:text-primary" />
-              </a>
-            </div>
+            {teamData.map((member) => (
+              <TeamCard
+                href={`/about/${member.slug}`}
+                key={member.id}
+                name={member.name}
+                role={member.role}
+                imageUrl={member.imageUrl}
+                linkedIn={member.linkedIn}
+              />
+            ))}
           </div>
         </div>
       </section>

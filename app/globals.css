@@ -57,6 +57,11 @@
     line-height: 1.1;
   }
 
+  .text-clamp-huge {
+    font-size: clamp(130px, 10vw + 1rem, 445px);
+    line-height: 1.1;
+  }
+
   .text {
     fill: white;
     transform-origin: 50% 50%;

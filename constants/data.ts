@@ -1,3 +1,5 @@
+import { Member } from "@/lib/types";
+
 export const navbarLinks = [
   {
     id: 1,
@@ -121,5 +123,106 @@ export const testimonialsData = [
     fullName: "Ellen Williams",
     tag: "Client",
     imageUrl: "/images/client-3.jpg",
+  },
+] as const;
+
+export const teamData: Member[] = [
+  {
+    id: 1,
+    slug: "ryan-seifert",
+    name: "Ryan Seifert",
+    role: "CEO",
+    imageUrl: "/images/ceo-image.png",
+    linkedIn: "https://www.linkedin.com/in/ryangregoryseifert/",
+    href: "/about/ryan-seifert",
+    skills: [
+      {
+        id: 1,
+        title: "Bussiness & Technology",
+        value: 88,
+        description:
+          "Helping companies achieve their goals through the strategic application of technology",
+      },
+      {
+        id: 2,
+        title: "Change Management",
+        value: 95,
+        description:
+          "Supporting the smooth adoption of software and technology into your organization",
+      },
+      {
+        id: 3,
+        title: "Dat Consolidation",
+        value: 89,
+        description:
+          "Driving data-driven business decisions through transparency and communication",
+      },
+    ],
+    bio: [
+      {
+        id: 1,
+        paragraph:
+          "Performance more often comes down to a culture challenge, rather an a technical one.",
+      },
+      {
+        id: 2,
+        paragraph:
+          "I have an innate urge to understand how systems work; that urge lead me to get a name for myself at the very young age of 10. It quickly became known that I was not to be left alone with your new toys. The first RC car I encountered had the case off within the day; the first integrated circuit radio, I barely stopped at the shrink wrap. Most of the time everything worked again; with some new “improvements” that were, at least in my opinion, outstanding. The same curiosity and focus on systems has motivated me to understand not only technology, but management, leadership, and enabling change through an organization.",
+      },
+      {
+        id: 3,
+        paragraph:
+          "My career has provided me wonderful opportunities for growth, ranging from building and deliberately setting a culture for development teams to leading companies through multiple acquisitions. The opportunities have taught me the extreme value on personal and team member growth, collaborative leadership, and team empowerment. I have found that IT and software provide a powerful impact on companies, but that impact must be supported though the culture. The alignment of technology and culture will allow the company to deliver the right solution and the right time.",
+      },
+      {
+        id: 4,
+        paragraph:
+          "I enjoy making new acquaintances. Don’t hesitate to contact me if you want to talk technology, business, or just have a fun app idea.",
+      },
+    ],
+  },
+  {
+    id: 2,
+    slug: "mike-nydell",
+    name: "Mike Nydell",
+    role: "COO",
+    imageUrl: "/images/coo-image.png",
+    linkedIn: "https://www.linkedin.com/in/mikenydell/",
+    href: "/about/mike-nydell",
+    skills: [
+      {
+        id: 1,
+        title: "Bussiness Intelligence",
+        value: 85,
+        description:
+          "Actionable insights through data warehousing and analysis",
+      },
+      {
+        id: 2,
+        title: "Process Automation",
+        value: 95,
+        description:
+          "Digitizing manual steps to increase productivity and reduce errors",
+      },
+      {
+        id: 3,
+        title: "Application Modernization",
+        value: 89,
+        description:
+          "Updating aging software to address functional and security gaps in your business processes",
+      },
+    ],
+    bio: [
+      {
+        id: 1,
+        paragraph:
+          "Mike has 30 years of experience in IT, software development, and technology consulting. In his roles as Technology Director, Technical Sales Lead, Architect, Developer, and Consultant has provided him valuable experiences in operations, training, sales,business development, and delivery.",
+      },
+      {
+        id: 2,
+        paragraph:
+          "Mike received his Bachelor of Science in Electrical Engineering from the University of Connecticut. He currently resides in Porter Texas with his wife of 30 years and has two adult boys. He loves to golf, enjoys a good bourbon, and used to travel for fun.",
+      },
+    ],
   },
 ] as const;

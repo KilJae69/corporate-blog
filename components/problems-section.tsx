@@ -6,11 +6,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import MarqueeBanner from "./shared/marquee-banner";
 
 export default function ProblemsSection() {
   return (
-    <section className=" bg-[#F4F8FA] px-5 pb-20 pt-10">
+    <section className=" bg-[#F4F8FA] px-4 pt-10">
       <div className="mx-auto flex max-w-7xl flex-col gap-10 md:flex-row md:items-center xl:gap-24">
         <div className="relative aspect-video size-full md:aspect-[10/14]">
           <Image
@@ -39,8 +38,6 @@ export default function ProblemsSection() {
           </Accordion>
         </div>
       </div>
-
-      <MarqueeBanner />
     </section>
   );
 }

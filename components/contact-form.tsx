@@ -23,9 +23,17 @@ import {
 import { Input } from "@/components/ui/input";
 import { FaPaperPlane } from "react-icons/fa6";
 import { TContactFormSchema, contactFormSchema } from "@/lib/types";
+import { cn } from "@/lib/utils";
 
-export default function ProfileForm() {
-  // 1. Define your form.
+type ProfileFormProps = {
+  formTitle: string;
+  className?: string;
+};
+
+export default function ProfileForm({
+  formTitle,
+  className,
+}: ProfileFormProps) {
   const form = useForm<TContactFormSchema>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -42,7 +50,6 @@ export default function ProfileForm() {
     formState: { errors, isSubmitting },
   } = form;
 
-  // 2. Define a submit handler.
   const onSubmit = async (formData: TContactFormSchema) => {
     console.log(FormData);
   };
@@ -51,10 +58,13 @@ export default function ProfileForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="  bg-white p-5 shadow-lg xs:px-14 xs:py-16 lg:px-20 lg:py-28"
+        className={cn(
+          "bg-white p-5 shadow-lg xs:px-14 xs:py-16 lg:px-20 lg:py-28",
+          className
+        )}
       >
         <p className="text-clamp-md mb-5 font-semibold text-[#131c26]">
-          Contact form
+          {formTitle}
         </p>
 
         <FormField
