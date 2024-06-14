@@ -5,6 +5,14 @@ import { FaLinkedin } from "react-icons/fa6";
 import ContactForm from "@/components/contact-form";
 import { notFound } from "next/navigation";
 
+export function generateStaticParams() {
+  const paths = teamData.map((member) => ({
+    memberSlug: member.slug,
+  }));
+
+  return paths;
+}
+
 export default function MemberSinglePage({
   params,
 }: {
