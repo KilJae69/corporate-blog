@@ -46,7 +46,7 @@ export default function MobileNavbarToggle({ close }: MobileNavbarToggleProps) {
     <button onClick={toggleNavbar}>
       <IoMenuOutline
         className={`size-8 ${
-          pathname === "/" ? "text-white" : "text-[#16202a]"
+          pathname === "/" || pathname === "/resources" ? "text-white" : "text-[#16202a]"
         }`}
       />
     </button>

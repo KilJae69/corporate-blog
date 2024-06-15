@@ -21,14 +21,18 @@ export default function Header() {
           <nav className="mr-10 hidden xl:block">
             <ul
               className={`flex gap-5 font-semibold  xl:text-xl
-              ${pathname === "/" ? "text-[#ccd1d9] " : "text-[#16202a]"}
+              ${
+                pathname === "/" || pathname === "/resources"
+                  ? "text-[#ccd1d9] "
+                  : "text-[#16202a]"
+              }
               `}
             >
               {navbarLinks.map((link) => (
                 <li className="group relative" key={link.id}>
                   <Link
                     className={`transition-colors 
-                      ${pathname === "/" ? "group-hover:text-white " : ""}
+                      ${pathname === "/" || pathname === "/resources" ? "group-hover:text-white " : ""}
                       `}
                     href={link.href}
                   >
@@ -36,7 +40,7 @@ export default function Header() {
                   </Link>
                   <span
                     className={`absolute -bottom-1 left-0 h-px w-0  transition-all duration-500 group-hover:w-full
-                    ${pathname === "/" ? "bg-[#ccd1d9]" : "bg-[#16202a]"}
+                    ${pathname === "/" || pathname === "/resources" ? "bg-[#ccd1d9]" : "bg-[#16202a]"}
                     `}
                   ></span>
                 </li>
@@ -46,7 +50,7 @@ export default function Header() {
           <div className="hidden md:block">
             <PrimaryLinkButton
               href="/contact"
-              variant={pathname === "/" ? "light" : "dark"}
+              variant={pathname === "/" || pathname === "/resources" ? "light" : "dark"}
               label="Get in Touch"
             />
           </div>

@@ -22,7 +22,7 @@ export default function TestimonialsSection() {
               align: "start",
               loop: true,
             }}
-            className=""
+           
           >
             <CarouselContent className="w-full">
               {testimonialsData.map((testimonial) => (
