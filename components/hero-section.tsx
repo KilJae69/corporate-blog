@@ -28,7 +28,7 @@ export default function HeroSection() {
             Bring your start up or company vision! You bring the Why, we can
             help on the How.
           </p> */}
-          <div className="relative md:absolute md:bottom-0 md:right-32 md:block md:max-h-[200px] md:max-w-[200px]">
+          <div className="relative md:absolute md:bottom-0 md:right-14 md:block md:max-h-[200px] md:max-w-[200px] lg:right-32">
             <TextCircle />
           </div>
         </div>
