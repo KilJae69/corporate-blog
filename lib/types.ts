@@ -78,3 +78,12 @@ export type Member = {
   skills: Skill[];
   bio: Bio[];
 };
+
+
+export type Blog = {
+  id: number;
+  title: string;
+  author: string;
+  createdAt: string;
+  images: string[];
+} 

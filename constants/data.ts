@@ -226,3 +226,78 @@ export const teamData: Member[] = [
     ],
   },
 ] as const;
+
+export const videosData = [
+  {
+    id: 1,
+    title: "HOW TO: INCREASE TEAM ENGAGEMENT",
+    thumbnail: "/images/video-4.jpg",
+    description:
+      "COO Mike Nydell, and CEO Ryan Seifert of Teric Technology share practical tips and tricks on how to support your team and increase team engagement. Employees are facing much uncertainty navigating the cultural changes and shift in engagement adjusting to the hybrid & WFH models. Ryan & Mike assist in a breakdown of how to support change management with your team.",
+    videoUrl: "https://www.youtube.com/watch?v=s1C3gZgU9fw",
+    createdAt: "2023-05-26",
+  },
+  {
+    id: 2,
+    title: "HOW TO: SUPPORT YOUR TEAM’S RETURN TO THE OFFICE",
+    thumbnail: "/images/video-3.webp",
+    description:
+      "Founder and CEO of Teric Technology, Ryan Seifert shares challenges and solutions to the hot topic that many employees and organizations are faced with post pandemic. Many employees are faced with adapting yet again to another major change in such a short period of time. Ryan gives some quick visuals and a how-to guide on how to best support your team returning to the office.",
+    videoUrl: "https://www.youtube.com/watch?v=Ru8C8Ub11TY",
+    createdAt: "2023-05-26",
+  },
+  {
+    id: 3,
+    title: "HOW TO: ADAPT FOR YOUR TEAM’S RETURN TO THE OFFICE",
+    thumbnail: "/images/video-1.jpg",
+    description:
+      "COO Mike Nydell of Teric Technology continues on to share practical tools on how to support your team as we adapt to the new culture of remote and hybrid work. Many organizations are facing challenges supporting their employees return to work while supporting the growing needs of their company.",
+    videoUrl: "https://www.youtube.com/watch?v=q-y9GyUhNP8",
+    createdAt: "2023-04-21",
+  },
+  {
+    id: 4,
+    title: "HOW TO: BECOME A DATA-DRIVEN ORGANIZATION",
+    thumbnail: "/images/video-2.webp",
+    description:
+      "Ryan Seifert, CEO of Teric Technology, explains the power of data-driven decision-making and discovers how this approach can drive better outcomes for your business. Unleash the full potential of your data and take the first step towards making informed, data-supported decisions. Don’t miss out!",
+    videoUrl: "https://www.youtube.com/watch?v=Ru8C8Ub11TY",
+    createdAt: "2023-04-21",
+  },
+];
+
+export const blogPostsData = [
+  {
+    id: 1,
+    title: "Winning with KPIs: Turning Uncertainty into Business Opportunity",
+    createdAt: new Date().toISOString(),
+    author: "Ryan Seifert",
+    images: ["/images/blogs/blog-1/1-1.jpg", "/images/blogs/blog-1/1-2.jpg"],
+  },
+  {
+    id: 2,
+    title: "The Data Saga: Unraveling the Tale of Business Success",
+    createdAt: new Date().toISOString(),
+    author: "Ryan Seifert",
+    images: ["/images/blogs/blog-2/2-1.jpg", "/images/blogs/blog-2/2-2.jpg"],
+  },
+  {
+    id: 3,
+    title:
+      "Unveiling the Different Flavors of CTO: A Delectable Guide to Tech Leadership",
+      createdAt: new Date().toISOString(),
+    author: "Ryan Seifert",
+    images: [
+      "/images/blogs/blog-3/3-1.jpg",
+      "/images/blogs/blog-3/3-2.jpg",
+      "/images/blogs/blog-3/3-3.jpg",
+    ],
+  },
+  {
+    id: 4,
+    title: "When Do You Build Software vs Buy Software?",
+    createdAt: new Date().toISOString(),
+    author: "Ryan Seifert",
+    images: ["/images/blogs/blog-4/4-1.png", "/images/blogs/blog-4/4-2.png"],
+  },
+] as const;
