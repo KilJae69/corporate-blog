@@ -5,7 +5,6 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
 
-
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
@@ -138,7 +137,7 @@ const Carousel = React.forwardRef<
         <div
           ref={ref}
           onKeyDownCapture={handleKeyDown}
-          className={cn("", className)}
+          className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
           {...props}

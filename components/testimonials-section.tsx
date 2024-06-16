@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-[#16202a] px-4 pb-20 pt-10 lg:pt-20 xl:pt-40">
+    <section className="bg-[#16202a] px-4 pb-20 pt-10 md:px-8 lg:px-16 lg:pt-20 xl:pt-40">
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-10 text-xs font-bold uppercase text-white md:text-lg xl:text-xl">
           Client Testimonials
@@ -22,7 +22,6 @@ export default function TestimonialsSection() {
               align: "start",
               loop: true,
             }}
-           
           >
             <CarouselContent className="w-full">
               {testimonialsData.map((testimonial) => (
@@ -30,7 +29,9 @@ export default function TestimonialsSection() {
                   className="flex flex-col items-center gap-5 text-center md:gap-10"
                   key={testimonial.id}
                 >
-                  <h3 className="text-clamp-lg text-white">{testimonial.quote}</h3>
+                  <h3 className="text-clamp-lg text-white">
+                    {testimonial.quote}
+                  </h3>
                   <div className="flex items-center gap-3">
                     <Image
                       src={testimonial.imageUrl}

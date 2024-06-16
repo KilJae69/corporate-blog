@@ -21,12 +21,11 @@ const config = {
       " max-xl": "2400px",
     },
     backgroundImage: {
-      hero: "url(/images/hero-bg.avif)",
+      hero: "url(/images/bg-image.webp)",
     },
 
     container: {
       center: true,
-      padding: "2rem",
       screens: {
         "max-xl": "2400px",
       },
@@ -66,10 +65,10 @@ const config = {
         },
       },
       animation: {
-        marquee: "marquee 25s linear infinite",
+        marquee: "marquee 35s linear infinite",
         "accordion-down": "accordion-down 0.5s ease-out",
         "accordion-up": "accordion-up 0.5s ease-out",
-        "spin-slow": "spin 5s linear infinite",
+        "spin-slow": "spin 9s linear infinite",
         grow: "grow 20s ease-in-out infinite",
         fadeIn: "fadeIn 2s ease-in-out forwards",
         fadeOut: "fadeOut 2s ease-in-out forwards",

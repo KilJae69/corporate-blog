@@ -1,5 +1,3 @@
-
-
 import MarqueeBanner from "@/components/shared/marquee-banner";
 import PrimaryLinkButton from "@/components/shared/primary-link-button";
 import TeamCard from "@/components/team-card";
@@ -16,7 +14,19 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-[#f4f8fa] px-4 pt-[calc(50px+var(--header-height))] md:px-10 md:pt-56">
+      <div className=" relative min-h-[30%] w-full pb-16 pt-[calc(50px+var(--header-height))]">
+        <Image
+          src="/images/main-background.jpg"
+          alt="Hero Background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          quality={50}
+        />
+        <div className="absolute inset-0 bg-[#16202a]/40"></div>
+      </div>
+      <section className="bg-[#f4f8fa] px-4  pt-10 md:px-8 md:pt-16 lg:px-16 xl:pt-20">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:gap-14">
           <h1 className="sr-only">About our company and our team</h1>
           <div className="relative aspect-video size-full md:md:aspect-[10/14] md:w-1/2">
@@ -24,7 +34,7 @@ export default function AboutPage() {
               className="absolute inset-0 size-full object-cover"
               src={"/images/about-image-2.avif"}
               fill
-              sizes="(max-width:767px) 100vw,50vw"
+              sizes="(min-width: 1500px) 640px, (min-width: 1040px) 41.82vw, (min-width: 780px) calc(50vw - 32px), calc(100vw - 32px)"
               alt="Collaboration image"
             />
           </div>
@@ -45,11 +55,15 @@ export default function AboutPage() {
               collaborative discussion. We know an open mind and multiple view
               points lead to the best results. Together we can leap forward.
             </p>
-            <PrimaryLinkButton variant="primary" href="/contact" label="Get in Touch" />
+            <PrimaryLinkButton
+              variant="primary"
+              href="/contact"
+              label="Get in Touch"
+            />
           </div>
         </div>
       </section>
-      <MarqueeBanner />
+      <MarqueeBanner text="We help realize business ideas"/>
       <section className="bg-[#f4f8fa] px-4 pb-24  md:px-10 md:pb-44 ">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 md:gap-14">
           <h2 className="text-xs font-semibold uppercase text-[#16202a] md:text-lg xl:text-xl">

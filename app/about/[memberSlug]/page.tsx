@@ -26,7 +26,20 @@ export default function MemberSinglePage({
 
   return (
     <>
-      <section className="bg-[#f4f8fa] px-4 pb-10 pt-[calc(50px+var(--header-height))] md:px-10 md:pb-[300px] 2md:pb-48">
+      <div className=" relative min-h-[30%] w-full pb-16 pt-[calc(50px+var(--header-height))]">
+        <Image
+          src="/images/main-background.jpg"
+          alt="Hero Background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          quality={50}
+        />
+        <div className="absolute inset-0 bg-[#16202a]/40"></div>
+      </div>
+
+      <section className="bg-[#f4f8fa] px-4 py-10 md:px-8 md:pb-[300px] md:pt-16 2md:pb-48 lg:px-16 xl:pt-20">
         <div className="relative mx-auto flex w-full max-w-7xl flex-col gap-3">
           <div className="mb-6">
             <span className="text-xs uppercase text-[#5a5a67] md:text-lg xl:text-xl">
@@ -45,7 +58,7 @@ export default function MemberSinglePage({
                   className="object-cover transition-transform duration-500 hover:scale-105"
                   src={"/images/boss-1.jpg"} // Replace with real Image data
                   fill
-                  sizes="(max-width:639px) 100vw, (max-width:1365px) 50vw, 30vw"
+                  sizes="(min-width: 1500px) 608px, (min-width: 1040px) 41.82vw, (min-width: 780px) calc(50vw - 64px), calc(100vw - 32px)"
                   alt={`${member.role} Image`}
                 />
               </div>
@@ -75,21 +88,23 @@ export default function MemberSinglePage({
             first-letter:mr-3 first-letter:text-5xl first-letter:font-semibold
             first-letter:text-black/60 first-line:tracking-widest"
                   >
-                    Qauris aliquam nisi non neque dignissim lobortis. Aenean
-                    purus nisl, sollicitudin efficitur tortor ac, semper
-                    hendrerit diam.
+                    Mike has 30 years of experience in IT, software development,
+                    and technology consulting.
                   </p>
                   <p>
-                    Donec interdum urna et auctor mattis. Nam imperdiet lobortis
-                    nibh cursus. Suspendisse viverra nec massa eget ornare.
+                    In his roles as Technology Director, Technical Sales Lead,
+                    Architect, Developer, and Consultant has provided him
+                    valuable experiences in operations, training, sales,business
+                    development, and delivery.
                   </p>
                   <p>
-                    Mauris maximus dui nec neque consectetur, vel auctor eros
-                    laoreet. Vestibulum ut justo tincidunt.
+                    Mike received his Bachelor of Science in Electrical
+                    Engineering from the University of Connecticut.
                   </p>
                   <p>
-                    Nunc rhoncus pharetra porttitor. Proin a tellus quis neque
-                    gravida venenatis. Nulla eget fermentum.
+                    He currently resides in Porter Texas with his wife of 30
+                    years and has two adult boys. He loves to golf, enjoys a
+                    good bourbon, and used to travel for fun.
                   </p>
                 </div>
               </div>
@@ -97,7 +112,7 @@ export default function MemberSinglePage({
           </div>
         </div>
       </section>
-      <section className="bg-white px-4 py-14 lg:py-32">
+      <section className="bg-white px-4 py-14 md:px-8 lg:px-16 lg:py-32">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-8 md:flex-row  md:gap-20">
           <div className="flex flex-1 flex-col gap-3 leading-7 text-[#5a5a67]">
             <h2 className="text-clamp-md mb-5 font-semibold text-[#131c26]">

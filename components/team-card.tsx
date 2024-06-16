@@ -25,7 +25,7 @@ export default function TeamCard({
             className="object-cover transition-transform duration-500 hover:scale-105"
             src={imageUrl}
             fill
-            sizes="(max-width:639px) 100vw, (max-width:1365px) 50vw, 30vw"
+            sizes="(min-width: 1340px) 576px, (min-width: 780px) calc(45.56vw - 25px), (min-width: 640px) calc(50vw - 36px), calc(96.25vw - 21px)"
             alt={`${role} Image`}
           />
         </div>

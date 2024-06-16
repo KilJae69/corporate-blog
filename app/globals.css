@@ -25,7 +25,7 @@
 
 @layer utilities {
   .gradient-text {
-    background: linear-gradient(45deg, #c0c4b0, #ffffff);
+    background: linear-gradient(45deg, #8c96a1, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -42,14 +42,17 @@
 
   .text-clamp-xs {
     font-size: clamp(16px, 3vw + 1px, 20px);
+    line-height: 1.2;
   }
 
   .text-clamp-md {
     font-size: clamp(25px, 4vw + 1px, 35px);
+    line-height: 1.2;
   }
 
   .text-clamp-lg {
     font-size: clamp(26px, 5vw + 1px, 57px);
+    line-height: 1.2;
   }
 
   .text-clamp-max-xl {

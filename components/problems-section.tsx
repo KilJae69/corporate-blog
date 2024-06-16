@@ -9,7 +9,7 @@ import {
 
 export default function ProblemsSection() {
   return (
-    <section className=" bg-[#F4F8FA] px-4 pt-10">
+    <section className=" bg-[#F4F8FA] px-4 pt-10 md:px-8 lg:px-16">
       <div className="mx-auto flex max-w-7xl flex-col gap-10 md:flex-row md:items-center xl:gap-24">
         <div className="relative aspect-video size-full md:aspect-[10/14]">
           <Image
@@ -17,6 +17,7 @@ export default function ProblemsSection() {
             src="/images/problems-image-2.avif"
             fill
             alt="Teamwork"
+            sizes="(min-width: 1460px) 592px, (min-width: 1040px) calc(39vw + 30px), (min-width: 780px) calc(50vw - 52px), calc(100vw - 32px)"
           />
         </div>
 

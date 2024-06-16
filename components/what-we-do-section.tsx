@@ -5,19 +5,23 @@ import React from "react";
 
 export default function WhatWeDoSection() {
   return (
-    <section className=" bg-[#16202a] px-4 pt-12 text-[#ccd1d9] ">
-      <div className="mx-auto flex max-w-7xl flex-col gap-5 md:gap-8 xl:gap-20">
+    <section className=" bg-[#16202a] px-4 py-10 text-[#ccd1d9] md:px-8 md:py-20 lg:px-16 xl:py-32">
+      <div className="container mx-auto flex flex-col gap-5 pb-20 md:gap-8 md:pb-32 xl:gap-20">
         <div className="flex flex-col gap-5">
           <h2 className="text-xs uppercase text-white md:text-lg xl:text-xl">
             What we do
           </h2>
-          <p className="text-clamp-lg  leading-7 md:max-w-[50%] md:leading-10 xl:leading-[1.2]">
-            <span className="gradient-text">Constantly coming</span>{" "}
-            <span className="gradient-text">up with new creative ideas</span>
+          <p className="text-clamp-lg  leading-10 md:max-w-[50%] md:leading-[1.2] xl:leading-[1.2]">
+            <span className="gradient-text inline-block ">
+              Constantly coming
+            </span>{" "}
+            <span className="gradient-text inline-block">
+              up with new creative ideas
+            </span>
           </p>
         </div>
 
-        <div className="flex flex-col gap-5  pb-10 md:flex-row md:gap-10 md:pb-16">
+        <div className="flex flex-col gap-5  md:flex-row md:gap-10">
           <div className="flex flex-col gap-5 md:min-w-[40%] md:gap-9 md:text-xl xl:text-3xl">
             <p>
               Consectetur adipiscing elit, sed do eiusm onsectetur adipiscing
@@ -65,7 +69,7 @@ export default function WhatWeDoSection() {
         </div>
       </div>
 
-      <div className=" grid justify-items-center gap-5 pb-20 xl:container sm:grid-cols-2 xl:grid-cols-4">
+      <div className=" grid justify-items-center gap-5 xl:container sm:grid-cols-2 xl:grid-cols-4">
         {servicesData.map((service) => (
           <React.Fragment key={service.id}>
             <AboutUsCard

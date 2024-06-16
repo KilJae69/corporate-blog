@@ -13,7 +13,7 @@ export default function Home() {
     <HeroSection/>
     <WhatWeDoSection/>
     <ProblemsSection/>
-    <MarqueeBanner />
+    <MarqueeBanner text="We help realize business ideas" />
     <TestimonialsSection/>
     <ContactSection/>
     </>
