@@ -2,15 +2,16 @@ import { blogPostsData } from "@/constants/data";
 
 import { format } from "date-fns";
 import Image from "next/image";
+import Link from "next/link";
 import { MdDoubleArrow } from "react-icons/md";
 
 type BlogCardProps = (typeof blogPostsData)[number]
 
-export default function BlogCard({ createdAt,images,author,title }: BlogCardProps) {
+export default function BlogCard({ createdAt,images,author,title,slug }: BlogCardProps) {
   const formatedDate = format(new Date(createdAt), "MMMM dd, yyyy");
 
   return (
-    <div className="group relative aspect-square w-full overflow-hidden shadow-md hover:cursor-pointer ">
+    <Link href={`/blog/${slug}`} className="group relative block aspect-square w-full overflow-hidden shadow-md hover:cursor-pointer ">
       <Image
         src={images[0]}
         alt=""
@@ -33,6 +34,6 @@ export default function BlogCard({ createdAt,images,author,title }: BlogCardProp
         <span className="text-clamp-xs whitespace-nowrap">Read more</span>
         <MdDoubleArrow className="size-8" />
       </div>
-    </div>
+    </Link>
   );
 }

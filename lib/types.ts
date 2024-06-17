@@ -1,7 +1,6 @@
 import { z } from "zod";
 
 // ## Contact Form Schema
-
 export const contactFormSchema = z.object({
   firstName: z
     .string()
@@ -53,8 +52,37 @@ export const contactFormSchema = z.object({
 
 export type TContactFormSchema = z.infer<typeof contactFormSchema>;
 
-// ## Team Member Types
+// ## Comment Form Schema
+export const commentFormSchema = z.object({
+  
+  name: z
+    .string()
+    .trim()
+    .min(1, {
+      message: "Name is required.",
+    })
+    .max(100, { message: "Name must be less than 100 characters." }),
+  email: z
+    .string()
+    .trim()
+    .email({ message: "Invalid email address" })
+    .min(1, {
+      message: "Email is required.",
+    })
+    .max(100, { message: "Email must be less than 100 characters." }),
+  
+  comment: z
+    .string()
+    .trim()
+    .min(1, {
+      message: "Comment is required.",
+    })
+    .max(1000, { message: "Comment must be less than 1000 characters." }),
+    saveInfo: z.boolean().optional(),
+});
 
+export type TCommentFormSchema = z.infer<typeof commentFormSchema>;
+// ## Team Member Types
 type Skill = {
   id: number;
   title: string;

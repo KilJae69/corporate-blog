@@ -1,4 +1,5 @@
 import { Member } from "@/lib/types";
+import { generateSlug } from "@/lib/utils";
 
 export const navbarLinks = [
   {
@@ -270,23 +271,41 @@ export const blogPostsData = [
   {
     id: 1,
     title: "Winning with KPIs: Turning Uncertainty into Business Opportunity",
+    slug: generateSlug(
+      "Winning with KPIs: Turning Uncertainty into Business Opportunity"
+    ),
     createdAt: new Date().toISOString(),
     author: "Ryan Seifert",
+    authorImg: "/images/ceo-image.png",
+    authorBio:
+      "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
     images: ["/images/blogs/blog-1/1-1.jpg", "/images/blogs/blog-1/1-2.jpg"],
   },
   {
     id: 2,
     title: "The Data Saga: Unraveling the Tale of Business Success",
+    slug: generateSlug(
+      "The Data Saga: Unraveling the Tale of Business Success"
+    ),
     createdAt: new Date().toISOString(),
     author: "Ryan Seifert",
+    authorImg: "/images/ceo-image.png",
+    authorBio:
+      "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
     images: ["/images/blogs/blog-2/2-1.jpg", "/images/blogs/blog-2/2-2.jpg"],
   },
   {
     id: 3,
     title:
       "Unveiling the Different Flavors of CTO: A Delectable Guide to Tech Leadership",
-      createdAt: new Date().toISOString(),
+    slug: generateSlug(
+      "Unveiling the Different Flavors of CTO: A Delectable Guide to Tech Leadership"
+    ),
+    createdAt: new Date().toISOString(),
     author: "Ryan Seifert",
+    authorImg: "/images/ceo-image.png",
+    authorBio:
+      "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
     images: [
       "/images/blogs/blog-3/3-1.jpg",
       "/images/blogs/blog-3/3-2.jpg",
@@ -296,8 +315,170 @@ export const blogPostsData = [
   {
     id: 4,
     title: "When Do You Build Software vs Buy Software?",
+    slug: generateSlug("When Do You Build Software vs Buy Software?"),
     createdAt: new Date().toISOString(),
     author: "Ryan Seifert",
+    authorImg: "/images/ceo-image.png",
+    authorBio:
+      "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
     images: ["/images/blogs/blog-4/4-1.png", "/images/blogs/blog-4/4-2.png"],
+  },
+  {
+    id: 5,
+    title: "AI Unleashed",
+    slug: generateSlug("AI Unleashed"),
+    createdAt: new Date().toISOString(),
+    author: "Ryan Seifert",
+    authorImg: "/images/ceo-image.png",
+    authorBio:
+      "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-5/5-1.png", "/images/blogs/blog-5/5-2.png"],
+  },
+  {
+    id: 6,
+    title: "Navigating Tech: A Pragmatic Approach for Small to Mid-Sized Companies",
+    slug: generateSlug(
+      "Navigating Tech: A Pragmatic Approach for Small to Mid-Sized Companies"
+    ),
+    createdAt: new Date().toISOString(),
+    author: "Mike Nydell",
+    authorImg: "/images/coo-image.png",
+    authorBio:
+      "Mike Nydell is the COO of Teric Technology. He has over 30 years of experience in IT, software development, and technology consulting. Mike is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-6/6-1.png", "/images/blogs/blog-6/6-2.png"],
+  },
+  {
+    id: 7,
+    title: "Tech Strategies: Companies Navigating Recessions With Precision",
+    slug: generateSlug(
+      "Tech Strategies: Companies Navigating Recessions With Precision"
+    ),
+    createdAt: new Date().toISOString(),
+    author: "Ryan Seifert",
+    authorImg: "/images/ceo-image.png",
+    authorBio:
+      "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-7/7-1.png", "/images/blogs/blog-7/7-2.png"],
+  },
+  {
+    id: 8,
+    title: "Embracing the Future: Your Company’s 2024 Tech Odyssey",
+    slug: generateSlug("Embracing the Future: Your Company’s 2024 Tech Odyssey"),
+    createdAt: new Date().toISOString(),
+    author: "Ryan Seifert",
+    authorImg: "/images/ceo-image.png",
+    authorBio:
+      "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-8/8-1.png", "/images/blogs/blog-8/8-2.png"],
+  },
+  {
+    id: 9,
+    title: "Getting the Requirements for Your Software",
+    slug: generateSlug("Getting the Requirements for Your Software"),
+    createdAt: new Date().toISOString(),
+    author: "Mike Nydell",
+    authorImg: "/images/coo-image.png",
+    authorBio:
+      "Mike Nydell is the COO of Teric Technology. He has over 30 years of experience in IT, software development, and technology consulting. Mike is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-9/9-1.png", "/images/blogs/blog-9/9-2.png"],
+  },
+  {
+    id: 10,
+    title: "When Do You Build Software vs Buy Software?",
+    slug: generateSlug("When Do You Build Software vs Buy Software?"),
+    createdAt: new Date().toISOString(),
+    author: "Ryan Seifert",
+    authorImg: "/images/ceo-image.png",
+    authorBio:
+      "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-10/10-1.png", "/images/blogs/blog-10/10-2.png"],
+  },
+  {
+    id: 11,
+    title: "Building Your Technology Roadmap",
+    slug: generateSlug("Building Your Technology Roadmap"),
+    createdAt: new Date().toISOString(),
+    author: "Mike Nydell",
+    authorImg: "/images/coo-image.png",
+    authorBio:
+      "Mike Nydell is the COO of Teric Technology. He has over 30 years of experience in IT, software development, and technology consulting. Mike is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-11/11-1.png", "/images/blogs/blog-11/11-2.png"],
+  },
+  {
+    id: 12,
+    title: "What should you expect from a Fractional CIO / CTO",
+    slug: generateSlug("What should you expect from a Fractional CIO / CTO"),
+    createdAt: new Date().toISOString(),
+    author: "Ryan Seifert",
+    authorImg: "/images/ceo-image.png",
+    authorBio:
+      "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-12/12-1.png", "/images/blogs/blog-12/12-2.png"],
+  },
+  {
+    id: 13,
+    title: "Should You Use a Technology Roadmap?",
+    slug: generateSlug("Should You Use a Technology Roadmap?"),
+    createdAt: new Date().toISOString(),
+    author: "Mike Nydell",
+    authorImg: "/images/coo-image.png",
+    authorBio:
+      "Mike Nydell is the COO of Teric Technology. He has over 30 years of experience in IT, software development, and technology consulting. Mike is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-13/13-1.png", "/images/blogs/blog-13/13-2.png"],
+  },
+  {
+    id: 14,
+    title: "Fractional CTOs and CIOs: The Key to Unlocking Cost Savings and Killer Tech Skills",
+    slug: generateSlug("Fractional CTOs and CIOs: The Key to Unlocking Cost Savings and Killer Tech Skills"),
+    createdAt: new Date().toISOString(),
+    author: "Ryan Seifert",
+    authorImg: "/images/ceo-image.png",
+    authorBio:
+      "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-14/14-1.png", "/images/blogs/blog-14/14-2.png"],
+  },
+  {
+    id: 15,
+    title: "Finding Your Company KPIs",
+    slug: generateSlug("Finding Your Company KPIs"),
+    createdAt: new Date().toISOString(),
+    author: "Ryan Seifert",
+    authorImg: "/images/ceo-image.png",
+    authorBio:
+      "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-15/15-1.png", "/images/blogs/blog-15/15-2.png"],
+  },
+  {
+    id: 16,
+    title: "Scorecard Benefits",
+    slug: generateSlug("Scorecard Benefits"),
+    createdAt: new Date().toISOString(),
+    author: "Mike Nydell",
+    authorImg: "/images/coo-image.png",
+    authorBio:
+      "Mike Nydell is the COO of Teric Technology. He has over 30 years of experience in IT, software development, and technology consulting. Mike is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-16/16-1.jpg", "/images/blogs/blog-16/16-2.jpg"],
+  },
+  {
+    id: 17,
+    title: "What Is ROWE Organization and How Do We Become One?",
+    slug: generateSlug("What Is ROWE Organization and How Do We Become One?"),
+    createdAt: new Date().toISOString(),
+    author: "Ryan Seifert",
+    authorImg: "/images/ceo-image.png",
+    authorBio:
+      "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-17/17-1.png", "/images/blogs/blog-17/17-2.png"],
+  },
+  {
+    id: 18,
+    title: "Becoming A Data-Driven Organization​",
+    slug: generateSlug("Becoming A Data-Driven Organization​"),
+    createdAt: new Date().toISOString(),
+    author: "Mike Nydell",
+    authorImg: "/images/coo-image.png",
+    authorBio:
+      "Mike Nydell is the COO of Teric Technology. He has over 30 years of experience in IT, software development, and technology consulting. Mike is passionate about helping companies achieve their goals through the strategic application of technology.",
+    images: ["/images/blogs/blog-18/18-1.jpg", "/images/blogs/blog-18/18-2.jpg"],
   },
 ] as const;
