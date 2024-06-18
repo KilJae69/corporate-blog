@@ -4,8 +4,8 @@ import "./globals.css";
 import React from "react";
 
 import MobileNavbar from "@/components/mobile-navbar";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 
 // const inter = Inter({ subsets: ["latin"] });
