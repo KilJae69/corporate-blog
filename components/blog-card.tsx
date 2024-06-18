@@ -5,13 +5,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdDoubleArrow } from "react-icons/md";
 
-type BlogCardProps = (typeof blogPostsData)[number]
+type BlogCardProps = (typeof blogPostsData)[number];
 
-export default function BlogCard({ createdAt,images,author,title,slug }: BlogCardProps) {
+export default function BlogCard({
+  createdAt,
+  images,
+  author,
+  title,
+  slug,
+}: BlogCardProps) {
   const formatedDate = format(new Date(createdAt), "MMMM dd, yyyy");
 
   return (
-    <Link href={`/blog/${slug}`} className="group relative block aspect-square w-full overflow-hidden shadow-md hover:cursor-pointer ">
+    <Link
+      href={`/blog/${slug}`}
+      className="group relative block aspect-square w-full overflow-hidden shadow-md hover:cursor-pointer "
+    >
       <Image
         src={images[0]}
         alt=""
@@ -22,7 +31,7 @@ export default function BlogCard({ createdAt,images,author,title,slug }: BlogCar
       <div className="gradient-overlay absolute inset-0" />
       <div className="absolute bottom-2 left-2 flex flex-col gap-3 px-1 pb-12 pt-1 text-white ">
         <div className="space-x-3 text-xs text-[#ccd1d9] md:text-lg xl:text-xl">
-          <span className=" font-semibold text-primary ">{author}</span>{" "}
+          <span className=" font-semibold text-accent ">{author}</span>{" "}
           <span>&diams;</span>
           <span className="">{formatedDate}</span>
         </div>
@@ -30,7 +39,7 @@ export default function BlogCard({ createdAt,images,author,title,slug }: BlogCar
           {title}
         </h2>
       </div>
-      <div className="absolute bottom-3 flex translate-x-[-70%] items-center gap-3 text-white transition-all duration-300 group-hover:translate-x-3 group-hover:text-primary">
+      <div className="absolute bottom-3 flex translate-x-[-70%] items-center gap-3 text-white transition-all duration-300 group-hover:translate-x-3 group-hover:text-accent">
         <span className="text-clamp-xs whitespace-nowrap">Read more</span>
         <MdDoubleArrow className="size-8" />
       </div>

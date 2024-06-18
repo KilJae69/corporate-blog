@@ -86,6 +86,7 @@ export type TCommentFormSchema = z.infer<typeof commentFormSchema>;
 type Skill = {
   id: number;
   title: string;
+  imgUrl: string;
   value: number;
   description: string;
 };

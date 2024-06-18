@@ -1,8 +1,10 @@
+"use client";
+import Link from "next/link";
 import { FaArrowDown } from "react-icons/fa6";
 
 export default function TextCircle() {
   return (
-    <div className="relative w-max hover:cursor-pointer">
+    <Link href={"#what-we-do"} className="relative block w-max hover:cursor-pointer">
       <svg
         className="relative size-[150px] animate-spin-slow  md:size-[200px] lg:size-[250px]"
         viewBox="0 0 250 250"
@@ -20,6 +22,6 @@ export default function TextCircle() {
         </text>
       </svg>
       <FaArrowDown className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl text-white" />
-    </div>
+    </Link>
   );
 }

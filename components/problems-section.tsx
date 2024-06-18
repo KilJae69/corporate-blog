@@ -9,7 +9,7 @@ import {
 
 export default function ProblemsSection() {
   return (
-    <section className=" bg-[#F4F8FA] px-4 pt-10 md:px-8 lg:px-16">
+    <section className=" bg-lightBg px-4 pt-10 md:px-8 lg:px-16">
       <div className="mx-auto flex max-w-7xl flex-col gap-10 md:flex-row md:items-center xl:gap-24">
         <div className="relative aspect-video size-full md:aspect-[10/14]">
           <Image
@@ -28,7 +28,7 @@ export default function ProblemsSection() {
           <Accordion type="single" className="" collapsible>
             {problemsData.map((problem) => (
               <AccordionItem key={problem.id} value={`item-${problem.id}`}>
-                <AccordionTrigger className="gap-3 text-start hover:text-primary data-[state=open]:text-primary xl:text-xl">
+                <AccordionTrigger className="gap-3 text-start hover:text-accent data-[state=open]:text-accent xl:text-xl">
                   {problem.title}
                 </AccordionTrigger>
                 <AccordionContent className="relative max-w-[95%] text-sm leading-6 tracking-wider text-black/50 xl:text-lg">

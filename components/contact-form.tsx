@@ -268,7 +268,7 @@ export default function ProfileForm({
         <Button
           disabled={isSubmitting}
           type="submit"
-          className="group relative mt-10 flex min-h-14 max-w-[155px] items-center justify-center gap-2 rounded-none bg-primary px-5 uppercase text-white transition-all "
+          className="group relative mt-10 flex min-h-14 max-w-[155px] items-center justify-center gap-2 rounded-none bg-accent px-5 uppercase text-white transition-all "
         >
           <FaPaperPlane className="size-3 text-white" />
           Get in Touch

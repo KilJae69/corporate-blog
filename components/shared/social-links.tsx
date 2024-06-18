@@ -10,7 +10,9 @@ export default function SocialLinks({ withBackground = false }) {
     <ul className="flex gap-5 text-white">
       <li
         className={`group ${
-          withBackground ? " cursor-pointer rounded-full bg-[#23313e] p-4" : ""
+          withBackground
+            ? " cursor-pointer rounded-full bg-primaryAccent p-4"
+            : ""
         }`}
       >
         <span className="sr-only">Link to facebook</span>
@@ -20,7 +22,9 @@ export default function SocialLinks({ withBackground = false }) {
       </li>
       <li
         className={`group ${
-          withBackground ? " cursor-pointer rounded-full bg-[#23313e] p-4" : ""
+          withBackground
+            ? " cursor-pointer rounded-full bg-primaryAccent p-4"
+            : ""
         }`}
       >
         <span className="sr-only">Link to X</span>
@@ -30,7 +34,9 @@ export default function SocialLinks({ withBackground = false }) {
       </li>
       <li
         className={`group ${
-          withBackground ? " cursor-pointer rounded-full bg-[#23313e] p-4" : ""
+          withBackground
+            ? " cursor-pointer rounded-full bg-primaryAccent p-4"
+            : ""
         }`}
       >
         <span className="sr-only">Link to LinkedIn</span>
@@ -40,7 +46,9 @@ export default function SocialLinks({ withBackground = false }) {
       </li>
       <li
         className={`group ${
-          withBackground ? " cursor-pointer rounded-full bg-[#23313e] p-4" : ""
+          withBackground
+            ? " cursor-pointer rounded-full bg-primaryAccent p-4"
+            : ""
         }`}
       >
         <span className="sr-only">Link to Instagram</span>

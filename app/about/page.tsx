@@ -1,5 +1,6 @@
 import MarqueeBanner from "@/components/shared/marquee-banner";
 import PrimaryLinkButton from "@/components/shared/primary-link-button";
+import SubHeader from "@/components/shared/sub-header";
 import TeamCard from "@/components/team-card";
 import { teamData } from "@/constants/data";
 import { Metadata } from "next";
@@ -14,21 +15,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <div className=" relative min-h-[30%] w-full pb-16 pt-[calc(50px+var(--header-height))]">
-        <Image
-          src="/images/main-background.jpg"
-          alt="Hero Background"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-          quality={50}
-        />
-        <div className="absolute inset-0 bg-[#16202a]/40"></div>
-      </div>
-      <section className="bg-[#f4f8fa] px-4  pt-10 md:px-8 md:pt-16 lg:px-16 xl:pt-20">
+      <SubHeader title="About us & Our team"/>
+      <section className="bg-lightBg px-4  pt-10 md:px-8 md:pt-16 lg:px-16 xl:pt-20">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:gap-14">
-          <h1 className="sr-only">About our company and our team</h1>
+          
           <div className="relative aspect-video size-full md:md:aspect-[10/14] md:w-1/2">
             <Image
               className="absolute inset-0 size-full object-cover"
@@ -39,7 +29,7 @@ export default function AboutPage() {
             />
           </div>
           <div className="flex flex-col gap-5 md:flex-1">
-            <h2 className="text-xs font-semibold uppercase text-[#16202a] md:text-lg xl:text-xl">
+            <h2 className="text-xs font-semibold uppercase text-primary md:text-lg xl:text-xl">
               About us
             </h2>
             <span className="text-clamp-md font-bold">
@@ -63,10 +53,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <MarqueeBanner text="We help realize business ideas"/>
-      <section className="bg-[#f4f8fa] px-4 pb-24  md:px-10 md:pb-44 ">
+      <MarqueeBanner text="We help realize business ideas" />
+      <section className="bg-lightBg px-4 pb-24  md:px-10 md:pb-44 ">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 md:gap-14">
-          <h2 className="text-xs font-semibold uppercase text-[#16202a] md:text-lg xl:text-xl">
+          <h2 className="text-xs font-semibold uppercase text-primary md:text-lg xl:text-xl">
             Meet our team
           </h2>
           <span className="text-clamp-md font-bold">

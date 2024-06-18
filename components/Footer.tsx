@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className=" bg-[#16202a] px-4 pb-8 md:px-8 lg:px-16">
+    <footer className=" bg-primary px-4 pb-8 md:px-8 lg:px-16">
       <div className="mx-auto max-w-7xl  pt-[70px] md:pt-[90px] xl:pt-[120px]">
         <div className="mx-auto flex max-w-[600px] flex-col items-center gap-8 ">
-          <div className="flex size-10 items-center justify-center rounded-full bg-primary">
+          <div className="flex size-10 items-center justify-center rounded-full bg-accent">
             <FaPaperPlane className="size-5 translate-x-[-2px] text-white" />
           </div>
           <p className="text-clamp-md text-center text-xl font-semibold text-white">
@@ -19,11 +19,11 @@ const Footer = () => {
             <input
               type="text"
               placeholder="Enter your email address"
-              className="w-full flex-1 bg-[#23313e] p-4 text-white outline-none focus:bg-[#23313e]/50 active:bg-[#23313e]/50"
+              className="w-full flex-1 bg-primaryAccent p-4 text-white outline-none focus:bg-primaryAccent/50 active:bg-primaryAccent/50"
             />
-            <button className="group relative flex min-h-14 max-w-[155px] items-center justify-center gap-2 bg-[#23313e] px-5 uppercase text-white transition-all hover:text-primary ">
-              <span className="absolute left-0 h-4/5 w-px bg-[#23313e] " />
-              <FaPaperPlane className="size-3 text-white transition-all group-hover:text-primary" />
+            <button className="group relative flex min-h-14 max-w-[155px] items-center justify-center gap-2 bg-primaryAccent px-5 uppercase text-white transition-all hover:text-accent ">
+              <span className="absolute left-0 h-4/5 w-px bg-primaryAccent " />
+              <FaPaperPlane className="size-3 text-white transition-all group-hover:text-accent" />
               Subscribe
             </button>
           </div>
@@ -38,7 +38,7 @@ const Footer = () => {
             <ul className="flex gap-5 font-semibold ">
               {navbarLinks.map((link) => (
                 <li
-                  className="text-white transition-colors hover:text-primary"
+                  className="text-white transition-colors hover:text-accent"
                   key={link.id}
                 >
                   <Link href={link.href}>{link.title}</Link>

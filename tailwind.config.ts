@@ -32,7 +32,10 @@ const config = {
     },
     extend: {
       colors: {
-        primary: "#ffb039",
+        accent: "#ffb039",
+        primary: "#16202a",
+        primaryAccent: "#23313e",
+        lightBg: "#f4f8fa",
       },
       spacing: {
         "header-height": "var(--header-height)",

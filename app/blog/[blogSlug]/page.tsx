@@ -1,51 +1,66 @@
 import BlogCard from "@/components/blog-card";
 import CommentForm from "@/components/comment-form";
 import ShareLinks from "@/components/share-links";
+import SubHeader from "@/components/shared/sub-header";
 import { blogPostsData } from "@/constants/data";
 import { shuffleArray } from "@/lib/utils";
 import { format } from "date-fns";
+import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { FaLinkedin } from "react-icons/fa6";
 
 type SingleBlogPageProps = {
-    params: {
-        blogSlug: string;
-    };
+  params: {
+    blogSlug: string;
+  };
+};
+
+export async function generateMetadata({
+  params,
+}: SingleBlogPageProps): Promise<Metadata> {
+  // read route params
+  const blogSlug = params.blogSlug;
+
+  // fetch data
+  const blog = blogPostsData.find((blog) => blog.slug === blogSlug);
+  if (!blog) return notFound();
+
+  return {
+    title: blog.title,
+    // ## Temporary dummy description / replace with blog content
+    description: "Teric BLOG",
+  };
 }
 
-export default function SingleBlogPage({params}: SingleBlogPageProps) {
-    const blogPost = blogPostsData.find((blog) => blog.slug === params.blogSlug);
+export function generateStaticParams() {
+  const paths = blogPostsData.map((blog) => ({
+    blogSlug: blog.slug,
+  }));
 
-    if (!blogPost) {
-        return notFound();
-    }
-    
-    const {title,createdAt,author,authorImg,authorBio,images} = blogPost
+  return paths;
+}
 
-    const formatedDate = format(new Date(createdAt), "MMMM dd, yyyy");
+export default function SingleBlogPage({ params }: SingleBlogPageProps) {
+  const blogPost = blogPostsData.find((blog) => blog.slug === params.blogSlug);
 
-    // ## Temporary dummy shuffle blogs 
-    const shuffledBlogs = shuffleArray(blogPostsData);
-const randomBlogs = shuffledBlogs.slice(0, 3);
-    
+  if (!blogPost) {
+    return notFound();
+  }
+
+  const { title, createdAt, author, authorImg, authorBio, images } = blogPost;
+
+  const formatedDate = format(new Date(createdAt), "MMMM dd, yyyy");
+
+  // ## Temporary dummy shuffle blogs
+  const shuffledBlogs = shuffleArray(blogPostsData);
+  const randomBlogs = shuffledBlogs.slice(0, 3);
+
   return (
     <>
-      <div className=" relative min-h-[30%] w-full px-4 pb-32 pt-[calc(50px+var(--header-height))] md:px-8 lg:px-16">
-        <Image
-          src="/images/main-background.jpg"
-          alt="Hero Background"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-          quality={50}
-        />
-        <div className="absolute inset-0 bg-[#16202a]/40"></div>
-        <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-10  text-start ">
-          <h1 className="text-clamp-lg     font-bold text-white">
-           {title}
-          </h1>
+      <SubHeader>
+        <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-10 px-4 pb-20 text-start md:px-8  lg:px-16 ">
+          <h1 className="text-clamp-lg     font-bold text-white">{title}</h1>
           <div className="flex items-center gap-4 text-xs text-[#ccd1d9] md:text-lg xl:text-xl">
             <Image
               src={authorImg}
@@ -54,23 +69,22 @@ const randomBlogs = shuffledBlogs.slice(0, 3);
               alt={"Author Image"}
               className="rounded-full"
             />
-            <span className=" font-semibold text-primary ">{author}</span>{" "}
+            <span className=" font-semibold text-accent ">{author}</span>{" "}
             <span>&diams;</span>
             <span className="">{formatedDate}</span>
           </div>
         </div>
-      </div>
-      <section className="relative   bg-[#f4f8fa] px-4 py-20 md:px-8 md:pb-24  lg:px-16">
+      </SubHeader>
+
+      <section className="relative   bg-lightBg px-4 py-20 md:px-8 md:pb-24  lg:px-16">
         <div className="relative mx-auto flex max-w-7xl flex-col-reverse gap-10 lg:flex-row-reverse lg:gap-20">
           <aside className="sticky top-4 flex h-full flex-col gap-8 bg-white p-8 shadow-md">
-            <h3 className="text-xl font-semibold text-[#16202a]">
+            <h3 className="text-xl font-semibold text-primary">
               Share this on
             </h3>
             <ShareLinks />
-            <h3 className="text-xl font-semibold text-[#16202a]">
-              Most Popular
-            </h3>
-            <ul className="grid gap-5 xs:grid-cols-2 lg:grid-cols-1">
+            <h3 className="text-xl font-semibold text-primary">Most Popular</h3>
+            <ul className="grid gap-5  xs:grid-cols-2 lg:grid-cols-1">
               {randomBlogs.map((blog) => (
                 <li key={blog.id}>
                   <BlogCard {...blog} />
@@ -104,7 +118,7 @@ const randomBlogs = shuffledBlogs.slice(0, 3);
                 predictions, turning uncertainty into your competitive
                 advantage.
               </p>
-              <h2 className="text-clamp-sm font-semibold text-[#16202a]">
+              <h2 className="text-clamp-sm font-semibold text-primary">
                 MASTERING THE ART OF DATA: TRANSFORM YOUR DASHBOARD INTO A
                 POWERHOUSE
               </h2>
@@ -130,7 +144,7 @@ const randomBlogs = shuffledBlogs.slice(0, 3);
                 a well-organized wardrobe – everything is in its place, easy to
                 find, and ready to impress.
               </p>
-              <h2 className="text-clamp-sm font-semibold text-[#16202a]">
+              <h2 className="text-clamp-sm font-semibold text-primary">
                 KPI MAGIC: UNLOCKING INDUSTRY LEADING INDICATORS FOR SUCCESS
               </h2>
               <p>
@@ -172,7 +186,7 @@ const randomBlogs = shuffledBlogs.slice(0, 3);
                 />
               </div>
 
-              <h2 className="text-clamp-sm font-semibold text-[#16202a]">
+              <h2 className="text-clamp-sm font-semibold text-primary">
                 PREDICT AND COMPETE: HARNESSING INDUSTRY KPIS AND DATA FOR A
                 WINNING EDGE
               </h2>
@@ -205,7 +219,7 @@ const randomBlogs = shuffledBlogs.slice(0, 3);
                 in your strategy and highlight opportunities for differentiation
               </p>
 
-              <h2 className="text-clamp-sm font-semibold text-[#16202a]">
+              <h2 className="text-clamp-sm font-semibold text-primary">
                 CONCLUSION: KPIS – YOUR STRATEGIC ADVANTAGE IN UNCERTAIN TIMES
               </h2>
               <p>
@@ -244,7 +258,7 @@ const randomBlogs = shuffledBlogs.slice(0, 3);
                 className="aspect-square  object-cover"
               />
               <div className="flex flex-1 flex-col gap-2">
-                <span className="text-xl font-semibold text-[#16202a]">
+                <span className="text-xl font-semibold text-primary">
                   {author}
                 </span>
                 <span className="text-sm font-light uppercase tracking-wide text-[#898a8e]">
@@ -257,7 +271,7 @@ const randomBlogs = shuffledBlogs.slice(0, 3);
                   <span className="sr-only">
                     Link to {"member.role"} LinkedIn profile
                   </span>
-                  <FaLinkedin className="size-8 cursor-pointer transition-colors hover:text-primary" />
+                  <FaLinkedin className="size-8 cursor-pointer transition-colors hover:text-accent" />
                 </a>
               </div>
             </div>

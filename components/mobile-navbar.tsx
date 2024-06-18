@@ -10,10 +10,10 @@ import useNavbarStore from "@/hooks/store/useNavbarStore";
 import SocialLinks from "./shared/social-links";
 
 export default function MobileNavbar() {
-  const { isNavbarOpen } = useNavbarStore();
+  const { isNavbarOpen, toggleNavbar } = useNavbarStore();
   return (
     <div
-      className={`absolute inset-0 z-50 h-screen bg-[#16202A] px-5 transition-all duration-500
+      className={`fixed inset-0 z-50 h-screen bg-primary px-5 transition-all duration-500
     ${isNavbarOpen ? "translate-y-0" : "-translate-y-full"}
     `}
     >
@@ -28,7 +28,11 @@ export default function MobileNavbar() {
       <nav className="mt-16">
         <ul className="flex flex-col gap-4 border-b-white text-2xl font-semibold text-[#ccd1d9]">
           {navbarLinks.map((link) => (
-            <li className="group flex items-center gap-5" key={link.id}>
+            <li
+              onClick={toggleNavbar}
+              className="group flex items-center gap-5"
+              key={link.id}
+            >
               <Link
                 className="transition-colors group-hover:text-white"
                 href={link.href}

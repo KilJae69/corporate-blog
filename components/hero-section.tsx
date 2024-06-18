@@ -1,9 +1,13 @@
+"use client";
+
+import useInViewHeroSection from "@/hooks/useInViewHeroSection";
 import MarqueeBanner from "./shared/marquee-banner";
 import TextCircle from "./text-circle";
 
 export default function HeroSection() {
+  const ref = useInViewHeroSection();
   return (
-    <section className=" mb-auto">
+    <section ref={ref} id="hero" className=" mb-auto">
       <div className="relative h-[70%] bg-hero bg-cover bg-no-repeat px-4 pb-14 pt-[calc(50px+var(--header-height))] md:px-8 md:pb-24 lg:px-16 xl:pb-32">
         {/* <Image
           src="/images/main-background.jpg"
@@ -14,7 +18,7 @@ export default function HeroSection() {
           className="object-cover"
           quality={50}
         /> */}
-        <div className="absolute inset-0 bg-[#16202a]/70"></div>
+        <div className="absolute inset-0 bg-primary/70"></div>
         <div className="container relative flex flex-col gap-8">
           <h1 className="font-bold">
             <span className="gradient-text text-clamp-max-xl">

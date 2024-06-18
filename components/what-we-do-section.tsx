@@ -5,7 +5,10 @@ import React from "react";
 
 export default function WhatWeDoSection() {
   return (
-    <section className=" bg-[#16202a] px-4 py-10 text-[#ccd1d9] md:px-8 md:py-20 lg:px-16 xl:py-32">
+    <section
+      id="what-we-do"
+      className=" bg-primary px-4 py-10 text-[#ccd1d9] md:px-8 md:py-20 lg:px-16 xl:py-32"
+    >
       <div className="container mx-auto flex flex-col gap-5 pb-20 md:gap-8 md:pb-32 xl:gap-20">
         <div className="flex flex-col gap-5">
           <h2 className="text-xs uppercase text-white md:text-lg xl:text-xl">

@@ -104,27 +104,20 @@ export const testimonialsData = [
   {
     id: 1,
     quote:
-      "We needed help with the launch of the new digital platform. It went better than expected!",
-    fullName: "Nelly Flatcher",
-    tag: "Client",
+      "We recently faced a critical, technical need and Teric Technology swiftly came to our aid, addressing the issue within 36 hours without any loss of data. Their team demonstrated professionalism, technical expertise, and a commitment to resolving our concerns. Working with Teric Technology was a seamless experience, and we highly recommend their services.",
+    fullName: "Carl Dave",
+    tag: "Union Tech",
     imageUrl: "/images/client-1.jpg",
   },
   {
     id: 2,
     quote:
-      "Unmatched expertise and an impressive portfolio. Working with TERIC is always a pleasure.",
-    fullName: "Patrick Dyson",
-    tag: "Client",
+      "Our experience with Teric Technology has been nothing short of amazing. The team at Teric has advised us and helped push our company forward in almost every way. From coming up with a comprehensive long term development plan, identifying platforms poised to handle our growth plan, to even assisting with helping us prepare the essential materials to present while we seek investment. Ryan and Mike are class acts as well as consummate professionals. Working with them will be the best decision you make, I know it was ACN’s.",
+    fullName: "Connor Martin",
+    tag: "ACN",
     imageUrl: "/images/client-2.jpg",
   },
-  {
-    id: 3,
-    quote:
-      "TERIC can provide that final push your project desperately needs. Enjoyed our collaboration!",
-    fullName: "Ellen Williams",
-    tag: "Client",
-    imageUrl: "/images/client-3.jpg",
-  },
+  
 ] as const;
 
 export const teamData: Member[] = [
@@ -140,6 +133,7 @@ export const teamData: Member[] = [
       {
         id: 1,
         title: "Bussiness & Technology",
+        imgUrl:"/images/blogs/blog-4/4-1.png",
         value: 88,
         description:
           "Helping companies achieve their goals through the strategic application of technology",
@@ -147,13 +141,15 @@ export const teamData: Member[] = [
       {
         id: 2,
         title: "Change Management",
+        imgUrl:"/images/blogs/blog-3/3-1.jpg",
         value: 95,
         description:
           "Supporting the smooth adoption of software and technology into your organization",
       },
       {
         id: 3,
-        title: "Dat Consolidation",
+        title: "Data Consolidation",
+        imgUrl:"/images/blogs/blog-5/5-1.png",
         value: 89,
         description:
           "Driving data-driven business decisions through transparency and communication",
@@ -194,6 +190,7 @@ export const teamData: Member[] = [
       {
         id: 1,
         title: "Bussiness Intelligence",
+        imgUrl:"/images/blogs/blog-4/4-1.png",
         value: 85,
         description:
           "Actionable insights through data warehousing and analysis",
@@ -201,6 +198,7 @@ export const teamData: Member[] = [
       {
         id: 2,
         title: "Process Automation",
+        imgUrl:"/images/blogs/blog-13/13-1.png",
         value: 95,
         description:
           "Digitizing manual steps to increase productivity and reduce errors",
@@ -208,6 +206,7 @@ export const teamData: Member[] = [
       {
         id: 3,
         title: "Application Modernization",
+        imgUrl:"/images/blogs/blog-9/9-1.png",
         value: 89,
         description:
           "Updating aging software to address functional and security gaps in your business processes",
@@ -232,38 +231,50 @@ export const videosData = [
   {
     id: 1,
     title: "HOW TO: INCREASE TEAM ENGAGEMENT",
+    author: "Mike Nydell",
+    authorImg:"/images/coo-image.png",
+    slug: generateSlug("HOW TO: INCREASE TEAM ENGAGEMENT"),
     thumbnail: "/images/video-4.jpg",
     description:
       "COO Mike Nydell, and CEO Ryan Seifert of Teric Technology share practical tips and tricks on how to support your team and increase team engagement. Employees are facing much uncertainty navigating the cultural changes and shift in engagement adjusting to the hybrid & WFH models. Ryan & Mike assist in a breakdown of how to support change management with your team.",
     videoUrl: "https://www.youtube.com/watch?v=s1C3gZgU9fw",
-    createdAt: "2023-05-26",
+    createdAt: new Date().toISOString(),
   },
   {
     id: 2,
     title: "HOW TO: SUPPORT YOUR TEAM’S RETURN TO THE OFFICE",
+    author: "Ryan Seifert",
+    authorImg:"/images/ceo-image.png",
+    slug: generateSlug("HOW TO: SUPPORT YOUR TEAM’S RETURN TO THE OFFICE"),
     thumbnail: "/images/video-3.webp",
     description:
       "Founder and CEO of Teric Technology, Ryan Seifert shares challenges and solutions to the hot topic that many employees and organizations are faced with post pandemic. Many employees are faced with adapting yet again to another major change in such a short period of time. Ryan gives some quick visuals and a how-to guide on how to best support your team returning to the office.",
     videoUrl: "https://www.youtube.com/watch?v=Ru8C8Ub11TY",
-    createdAt: "2023-05-26",
+    createdAt: new Date().toISOString(),
   },
   {
     id: 3,
     title: "HOW TO: ADAPT FOR YOUR TEAM’S RETURN TO THE OFFICE",
+    author: "Mike Nydell",
+    authorImg:"/images/coo-image.png",
+    slug: generateSlug("HOW TO: ADAPT FOR YOUR TEAM’S RETURN TO THE OFFICE"),
     thumbnail: "/images/video-1.jpg",
     description:
       "COO Mike Nydell of Teric Technology continues on to share practical tools on how to support your team as we adapt to the new culture of remote and hybrid work. Many organizations are facing challenges supporting their employees return to work while supporting the growing needs of their company.",
     videoUrl: "https://www.youtube.com/watch?v=q-y9GyUhNP8",
-    createdAt: "2023-04-21",
+    createdAt: new Date().toISOString(),
   },
   {
     id: 4,
     title: "HOW TO: BECOME A DATA-DRIVEN ORGANIZATION",
+    author: "Ryan Seifert",
+    authorImg:"/images/ceo-image.png",
+    slug: generateSlug("HOW TO: BECOME A DATA-DRIVEN ORGANIZATION"),
     thumbnail: "/images/video-2.webp",
     description:
       "Ryan Seifert, CEO of Teric Technology, explains the power of data-driven decision-making and discovers how this approach can drive better outcomes for your business. Unleash the full potential of your data and take the first step towards making informed, data-supported decisions. Don’t miss out!",
     videoUrl: "https://www.youtube.com/watch?v=Ru8C8Ub11TY",
-    createdAt: "2023-04-21",
+    createdAt: new Date().toISOString(),
   },
 ];
 

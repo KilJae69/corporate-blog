@@ -4,6 +4,16 @@ import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa6";
 import ContactForm from "@/components/contact-form";
 import { notFound } from "next/navigation";
+import React from "react";
+import AboutUsCard from "@/components/about-us-card";
+import SubHeader from "@/components/shared/sub-header";
+import { Metadata } from "next";
+
+type MemberSinglePageProps = {
+  params: {
+    memberSlug: string;
+  };
+};
 
 export function generateStaticParams() {
   const paths = teamData.map((member) => ({
@@ -13,11 +23,26 @@ export function generateStaticParams() {
   return paths;
 }
 
-export default function MemberSinglePage({
+// Will need to be async 
+export async function generateMetadata({
   params,
-}: {
-  params: { memberSlug: "ryan-seifart" | "mike-nydell" };
-}) {
+}: MemberSinglePageProps): Promise<Metadata> {
+  // read route params
+  const memberSlug = params.memberSlug;
+
+  // fetch data
+  const member = teamData.find((member) => member.slug === memberSlug);
+  if (!member) return notFound();
+
+  const bio = member.bio.map((para) => para.paragraph).join(" ");
+
+  return {
+    title: member.name,
+    description: bio,
+  };
+}
+
+export default function MemberSinglePage({ params }: MemberSinglePageProps) {
   const member = teamData.find((member) => member.slug === params.memberSlug);
 
   if (!member) {
@@ -26,26 +51,15 @@ export default function MemberSinglePage({
 
   return (
     <>
-      <div className=" relative min-h-[30%] w-full pb-16 pt-[calc(50px+var(--header-height))]">
-        <Image
-          src="/images/main-background.jpg"
-          alt="Hero Background"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-          quality={50}
-        />
-        <div className="absolute inset-0 bg-[#16202a]/40"></div>
-      </div>
+      <SubHeader title="Our team"/>
 
-      <section className="bg-[#f4f8fa] px-4 py-10 md:px-8 md:pb-[300px] md:pt-16 2md:pb-48 lg:px-16 xl:pt-20">
+      <section className="bg-lightBg px-4 py-10 md:px-8 md:pb-[300px] md:pt-16 2md:pb-48 lg:px-16 xl:pt-20">
         <div className="relative mx-auto flex w-full max-w-7xl flex-col gap-3">
           <div className="mb-6">
             <span className="text-xs uppercase text-[#5a5a67] md:text-lg xl:text-xl">
               {member.role}
             </span>
-            <h1 className="text-clamp-md text-xl font-semibold text-[#16202a]">
+            <h1 className="text-clamp-md text-xl font-semibold text-primary">
               {member.name}
             </h1>
           </div>
@@ -56,7 +70,7 @@ export default function MemberSinglePage({
                 <Image
                   priority
                   className="object-cover transition-transform duration-500 hover:scale-105"
-                  src={"/images/boss-1.jpg"} // Replace with real Image data
+                  src={member.imageUrl} // Replace with real Image data
                   fill
                   sizes="(min-width: 1500px) 608px, (min-width: 1040px) 41.82vw, (min-width: 780px) calc(50vw - 64px), calc(100vw - 32px)"
                   alt={`${member.role} Image`}
@@ -66,7 +80,7 @@ export default function MemberSinglePage({
                 <span className="sr-only">
                   Link to {member.role} LinkedIn profile
                 </span>
-                <FaLinkedin className="size-8 cursor-pointer transition-colors hover:text-primary" />
+                <FaLinkedin className="size-8 cursor-pointer transition-colors hover:text-accent" />
               </a>
             </div>
 
@@ -88,27 +102,45 @@ export default function MemberSinglePage({
             first-letter:mr-3 first-letter:text-5xl first-letter:font-semibold
             first-letter:text-black/60 first-line:tracking-widest"
                   >
-                    Mike has 30 years of experience in IT, software development,
-                    and technology consulting.
+                    Qonsectetur adipiscing elit, sed do eiusm onsectetur
+                    adipiscing elit, sed do eiusm od tempor incididunt ut
+                    labore.
                   </p>
                   <p>
-                    In his roles as Technology Director, Technical Sales Lead,
-                    Architect, Developer, and Consultant has provided him
-                    valuable experiences in operations, training, sales,business
-                    development, and delivery.
+                    Adipiscing elit, sed do eiusm consectetur aonsectetur sed do
+                    eiusm od tempor adipiscing elit, sed do eiusm od tempor.
                   </p>
                   <p>
-                    Mike received his Bachelor of Science in Electrical
-                    Engineering from the University of Connecticut.
+                    Consectetur adipiscing elit, sed do eiusm onsectetur
+                    adipiscing elit, sed do eiusm od tempor incididunt ut
+                    labore.
                   </p>
                   <p>
-                    He currently resides in Porter Texas with his wife of 30
-                    years and has two adult boys. He loves to golf, enjoys a
-                    good bourbon, and used to travel for fun.
+                    Consectetur adipiscing elit, sed do eiusm onsectetur
+                    adipiscing elit, sed do eiusm od tempor.
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-[#e2ecf1] px-4 pb-10 md:px-8   lg:px-16 ">
+        <div className="mx-auto max-w-7xl text-center">
+          <h2 className="text-clamp-md mb-5 font-semibold text-[#131c26]">
+            Skill Sets/Focus
+          </h2>
+          <div className="mx-auto mt-8 flex flex-wrap items-center justify-center gap-10">
+            {member.skills.map((skill) => (
+              <React.Fragment key={skill.id}>
+                <AboutUsCard
+                  className="max-w-[300px]"
+                  title={skill.title}
+                  description={skill.description}
+                  imageUrl={skill.imgUrl}
+                />
+              </React.Fragment>
+            ))}
           </div>
         </div>
       </section>

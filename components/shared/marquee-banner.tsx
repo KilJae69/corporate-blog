@@ -12,8 +12,8 @@ export default function MarqueeBanner({
       className={`overflow-hidden whitespace-nowrap    
     ${
       variant === "hero"
-        ? "bg-[#16202a] py-5 md:py-10"
-        : "bg-[#F4F8FA] py-10 md:py-20"
+        ? "bg-primary py-5 md:py-10"
+        : "bg-lightBg py-10 md:py-20"
     }
     `}
     >

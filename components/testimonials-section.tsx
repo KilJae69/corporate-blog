@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-[#16202a] px-4 pb-20 pt-10 md:px-8 lg:px-16 lg:pt-20 xl:pt-40">
+    <section className="bg-primary px-4 pb-20 pt-10 md:px-8 lg:px-16 lg:pt-20 xl:pt-40">
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-10 text-xs font-bold uppercase text-white md:text-lg xl:text-xl">
           Client Testimonials
@@ -29,7 +29,7 @@ export default function TestimonialsSection() {
                   className="flex flex-col items-center gap-5 text-center md:gap-10"
                   key={testimonial.id}
                 >
-                  <h3 className="text-clamp-lg text-white">
+                  <h3 className="text-clamp-xs text-white">
                     {testimonial.quote}
                   </h3>
                   <div className="flex items-center gap-3">
@@ -53,12 +53,12 @@ export default function TestimonialsSection() {
               ))}
             </CarouselContent>
             <CarouselPrevious
-              variant="ghost"
-              className="-left-3 size-6 text-white hover:text-primary sm:left-0 sm:size-14"
+              variant="destructive"
+              className="-left-3 size-6 text-white hover:text-accent sm:left-0 sm:size-14"
             />
             <CarouselNext
-              variant="ghost"
-              className="-right-3 size-6 text-white hover:text-primary sm:right-0 sm:size-14"
+              variant="destructive"
+              className="-right-3 size-6 text-white hover:text-accent sm:right-0 sm:size-14"
             />
           </Carousel>
         </div>
