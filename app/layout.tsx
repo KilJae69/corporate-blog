@@ -7,7 +7,6 @@ import MobileNavbar from "@/components/mobile-navbar";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-
 // const inter = Inter({ subsets: ["latin"] });
 
 const outfit = Outfit({
@@ -31,15 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body
-        className={`${outfit.className} `}
-      >
-
+      <body className={`${outfit.className} `}>
         <Header />
         <MobileNavbar />
-        <main className="">
-        {children}
-        </main>
+        <main className="">{children}</main>
         <Footer />
       </body>
     </html>
