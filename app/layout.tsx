@@ -7,6 +7,7 @@ import MobileNavbar from "@/components/mobile-navbar";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
+
 // const inter = Inter({ subsets: ["latin"] });
 
 const outfit = Outfit({
