@@ -14,12 +14,16 @@ export default function MobileNavbar() {
   return (
     <div
       className={`fixed inset-0 z-50 h-screen bg-primary px-5 transition-all duration-500
-    ${isNavbarOpen ? "translate-y-0" : "-translate-y-full"}
+    ${
+      isNavbarOpen
+        ? "translate-y-0 opacity-100"
+        : "pointer-events-none -translate-y-full opacity-0"
+    }
     `}
     >
       <div
         className={`flex items-center justify-between py-8 transition-opacity delay-500 duration-500
-        ${isNavbarOpen ? "opacity-100" : "opacity-0"}
+        ${isNavbarOpen ? "opacity-100" : "pointer-events-none opacity-0"}
         `}
       >
         <Logo />

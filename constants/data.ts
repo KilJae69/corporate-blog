@@ -117,7 +117,6 @@ export const testimonialsData = [
     tag: "ACN",
     imageUrl: "/images/client-2.jpg",
   },
-  
 ] as const;
 
 export const teamData: Member[] = [
@@ -125,6 +124,8 @@ export const teamData: Member[] = [
     id: 1,
     slug: "ryan-seifert",
     name: "Ryan Seifert",
+    shortBio:
+      "Ryan has a passion to help companies strategically add the most impactful technology to positively change their environment.",
     role: "CEO",
     imageUrl: "/images/ceo-image.png",
     linkedIn: "https://www.linkedin.com/in/ryangregoryseifert/",
@@ -133,7 +134,7 @@ export const teamData: Member[] = [
       {
         id: 1,
         title: "Bussiness & Technology",
-        imgUrl:"/images/blogs/blog-4/4-1.png",
+        imgUrl: "/images/blogs/blog-4/4-1.png",
         value: 88,
         description:
           "Helping companies achieve their goals through the strategic application of technology",
@@ -141,7 +142,7 @@ export const teamData: Member[] = [
       {
         id: 2,
         title: "Change Management",
-        imgUrl:"/images/blogs/blog-3/3-1.jpg",
+        imgUrl: "/images/blogs/blog-3/3-1.jpg",
         value: 95,
         description:
           "Supporting the smooth adoption of software and technology into your organization",
@@ -149,11 +150,22 @@ export const teamData: Member[] = [
       {
         id: 3,
         title: "Data Consolidation",
-        imgUrl:"/images/blogs/blog-5/5-1.png",
+        imgUrl: "/images/blogs/blog-5/5-1.png",
         value: 89,
         description:
           "Driving data-driven business decisions through transparency and communication",
       },
+    ],
+    specialties: [
+      "Technology Thought-Leader",
+      "Strategic Vision",
+      "Organization / Digital Transformation",
+      "Staff Development",
+      "Highly Adaptable",
+      "Large Team Management",
+      "Global Team Management",
+      "Continuous Improvement",
+      "Tech Jargon Translation",
     ],
     bio: [
       {
@@ -182,6 +194,8 @@ export const teamData: Member[] = [
     id: 2,
     slug: "mike-nydell",
     name: "Mike Nydell",
+    shortBio:
+      "Mike has a long history of developing, integrating, and delivering enterprise technology systems.",
     role: "COO",
     imageUrl: "/images/coo-image.png",
     linkedIn: "https://www.linkedin.com/in/mikenydell/",
@@ -190,7 +204,7 @@ export const teamData: Member[] = [
       {
         id: 1,
         title: "Bussiness Intelligence",
-        imgUrl:"/images/blogs/blog-4/4-1.png",
+        imgUrl: "/images/blogs/blog-4/4-1.png",
         value: 85,
         description:
           "Actionable insights through data warehousing and analysis",
@@ -198,7 +212,7 @@ export const teamData: Member[] = [
       {
         id: 2,
         title: "Process Automation",
-        imgUrl:"/images/blogs/blog-13/13-1.png",
+        imgUrl: "/images/blogs/blog-13/13-1.png",
         value: 95,
         description:
           "Digitizing manual steps to increase productivity and reduce errors",
@@ -206,11 +220,22 @@ export const teamData: Member[] = [
       {
         id: 3,
         title: "Application Modernization",
-        imgUrl:"/images/blogs/blog-9/9-1.png",
+        imgUrl: "/images/blogs/blog-9/9-1.png",
         value: 89,
         description:
           "Updating aging software to address functional and security gaps in your business processes",
       },
+    ],
+    specialties: [
+      "Business / IT Development & Advisory",
+      "Business Intelligence, Data Platforms & Analytics",
+      "Process Improvement & Automation",
+      "Delivery Management & Oversight",
+      "App Rationalization / Modernization",
+      "Enterprise, Solution & Integration Architecture",
+      "Software Engineering & Enterprise SDLC",
+      "Azure & Microsoft Technology Stack",
+      "DevOps, CI/CD & Agile Scrum",
     ],
     bio: [
       {
@@ -232,7 +257,7 @@ export const videosData = [
     id: 1,
     title: "HOW TO: INCREASE TEAM ENGAGEMENT",
     author: "Mike Nydell",
-    authorImg:"/images/coo-image.png",
+    authorImg: "/images/coo-image.png",
     slug: generateSlug("HOW TO: INCREASE TEAM ENGAGEMENT"),
     thumbnail: "/images/video-4.jpg",
     description:
@@ -244,7 +269,7 @@ export const videosData = [
     id: 2,
     title: "HOW TO: SUPPORT YOUR TEAM’S RETURN TO THE OFFICE",
     author: "Ryan Seifert",
-    authorImg:"/images/ceo-image.png",
+    authorImg: "/images/ceo-image.png",
     slug: generateSlug("HOW TO: SUPPORT YOUR TEAM’S RETURN TO THE OFFICE"),
     thumbnail: "/images/video-3.webp",
     description:
@@ -256,7 +281,8 @@ export const videosData = [
     id: 3,
     title: "HOW TO: ADAPT FOR YOUR TEAM’S RETURN TO THE OFFICE",
     author: "Mike Nydell",
-    authorImg:"/images/coo-image.png",
+
+    authorImg: "/images/coo-image.png",
     slug: generateSlug("HOW TO: ADAPT FOR YOUR TEAM’S RETURN TO THE OFFICE"),
     thumbnail: "/images/video-1.jpg",
     description:
@@ -268,7 +294,7 @@ export const videosData = [
     id: 4,
     title: "HOW TO: BECOME A DATA-DRIVEN ORGANIZATION",
     author: "Ryan Seifert",
-    authorImg:"/images/ceo-image.png",
+    authorImg: "/images/ceo-image.png",
     slug: generateSlug("HOW TO: BECOME A DATA-DRIVEN ORGANIZATION"),
     thumbnail: "/images/video-2.webp",
     description:
@@ -347,7 +373,8 @@ export const blogPostsData = [
   },
   {
     id: 6,
-    title: "Navigating Tech: A Pragmatic Approach for Small to Mid-Sized Companies",
+    title:
+      "Navigating Tech: A Pragmatic Approach for Small to Mid-Sized Companies",
     slug: generateSlug(
       "Navigating Tech: A Pragmatic Approach for Small to Mid-Sized Companies"
     ),
@@ -374,7 +401,9 @@ export const blogPostsData = [
   {
     id: 8,
     title: "Embracing the Future: Your Company’s 2024 Tech Odyssey",
-    slug: generateSlug("Embracing the Future: Your Company’s 2024 Tech Odyssey"),
+    slug: generateSlug(
+      "Embracing the Future: Your Company’s 2024 Tech Odyssey"
+    ),
     createdAt: new Date().toISOString(),
     author: "Ryan Seifert",
     authorImg: "/images/ceo-image.png",
@@ -402,7 +431,10 @@ export const blogPostsData = [
     authorImg: "/images/ceo-image.png",
     authorBio:
       "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
-    images: ["/images/blogs/blog-10/10-1.png", "/images/blogs/blog-10/10-2.png"],
+    images: [
+      "/images/blogs/blog-10/10-1.png",
+      "/images/blogs/blog-10/10-2.png",
+    ],
   },
   {
     id: 11,
@@ -413,7 +445,10 @@ export const blogPostsData = [
     authorImg: "/images/coo-image.png",
     authorBio:
       "Mike Nydell is the COO of Teric Technology. He has over 30 years of experience in IT, software development, and technology consulting. Mike is passionate about helping companies achieve their goals through the strategic application of technology.",
-    images: ["/images/blogs/blog-11/11-1.png", "/images/blogs/blog-11/11-2.png"],
+    images: [
+      "/images/blogs/blog-11/11-1.png",
+      "/images/blogs/blog-11/11-2.png",
+    ],
   },
   {
     id: 12,
@@ -424,7 +459,10 @@ export const blogPostsData = [
     authorImg: "/images/ceo-image.png",
     authorBio:
       "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
-    images: ["/images/blogs/blog-12/12-1.png", "/images/blogs/blog-12/12-2.png"],
+    images: [
+      "/images/blogs/blog-12/12-1.png",
+      "/images/blogs/blog-12/12-2.png",
+    ],
   },
   {
     id: 13,
@@ -435,18 +473,27 @@ export const blogPostsData = [
     authorImg: "/images/coo-image.png",
     authorBio:
       "Mike Nydell is the COO of Teric Technology. He has over 30 years of experience in IT, software development, and technology consulting. Mike is passionate about helping companies achieve their goals through the strategic application of technology.",
-    images: ["/images/blogs/blog-13/13-1.png", "/images/blogs/blog-13/13-2.png"],
+    images: [
+      "/images/blogs/blog-13/13-1.png",
+      "/images/blogs/blog-13/13-2.png",
+    ],
   },
   {
     id: 14,
-    title: "Fractional CTOs and CIOs: The Key to Unlocking Cost Savings and Killer Tech Skills",
-    slug: generateSlug("Fractional CTOs and CIOs: The Key to Unlocking Cost Savings and Killer Tech Skills"),
+    title:
+      "Fractional CTOs and CIOs: The Key to Unlocking Cost Savings and Killer Tech Skills",
+    slug: generateSlug(
+      "Fractional CTOs and CIOs: The Key to Unlocking Cost Savings and Killer Tech Skills"
+    ),
     createdAt: new Date().toISOString(),
     author: "Ryan Seifert",
     authorImg: "/images/ceo-image.png",
     authorBio:
       "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
-    images: ["/images/blogs/blog-14/14-1.png", "/images/blogs/blog-14/14-2.png"],
+    images: [
+      "/images/blogs/blog-14/14-1.png",
+      "/images/blogs/blog-14/14-2.png",
+    ],
   },
   {
     id: 15,
@@ -457,7 +504,10 @@ export const blogPostsData = [
     authorImg: "/images/ceo-image.png",
     authorBio:
       "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
-    images: ["/images/blogs/blog-15/15-1.png", "/images/blogs/blog-15/15-2.png"],
+    images: [
+      "/images/blogs/blog-15/15-1.png",
+      "/images/blogs/blog-15/15-2.png",
+    ],
   },
   {
     id: 16,
@@ -468,7 +518,10 @@ export const blogPostsData = [
     authorImg: "/images/coo-image.png",
     authorBio:
       "Mike Nydell is the COO of Teric Technology. He has over 30 years of experience in IT, software development, and technology consulting. Mike is passionate about helping companies achieve their goals through the strategic application of technology.",
-    images: ["/images/blogs/blog-16/16-1.jpg", "/images/blogs/blog-16/16-2.jpg"],
+    images: [
+      "/images/blogs/blog-16/16-1.jpg",
+      "/images/blogs/blog-16/16-2.jpg",
+    ],
   },
   {
     id: 17,
@@ -479,7 +532,10 @@ export const blogPostsData = [
     authorImg: "/images/ceo-image.png",
     authorBio:
       "Ryan Seifert is the CEO of Teric Technology. He has over 20 years of experience in technology and business leadership. Ryan is passionate about helping companies achieve their goals through the strategic application of technology.",
-    images: ["/images/blogs/blog-17/17-1.png", "/images/blogs/blog-17/17-2.png"],
+    images: [
+      "/images/blogs/blog-17/17-1.png",
+      "/images/blogs/blog-17/17-2.png",
+    ],
   },
   {
     id: 18,
@@ -490,6 +546,9 @@ export const blogPostsData = [
     authorImg: "/images/coo-image.png",
     authorBio:
       "Mike Nydell is the COO of Teric Technology. He has over 30 years of experience in IT, software development, and technology consulting. Mike is passionate about helping companies achieve their goals through the strategic application of technology.",
-    images: ["/images/blogs/blog-18/18-1.jpg", "/images/blogs/blog-18/18-2.jpg"],
+    images: [
+      "/images/blogs/blog-18/18-1.jpg",
+      "/images/blogs/blog-18/18-2.jpg",
+    ],
   },
 ] as const;

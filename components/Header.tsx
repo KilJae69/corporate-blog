@@ -26,7 +26,6 @@ export default function Header() {
     setSubHeaderVisible,
   } = useSectionStore((state) => state);
 
-
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
 
@@ -64,8 +63,8 @@ export default function Header() {
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className={`fixed top-0 z-50 mx-auto h-header-height w-full ${
         initialLoad || heroInView || subHeaderInView
-          ? "bg-transparent"
-          : "bg-primary shadow-lg shadow-black/[0.03]"
+          ? "bg-transparent shadow-none"
+          : "bg-primary shadow-lg shadow-black/40"
       } px-4 py-2.5  md:px-8 lg:px-16`}
     >
       <div className="container flex size-full items-center justify-between">

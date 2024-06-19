@@ -100,11 +100,13 @@ export type Member = {
   id: number;
   slug: string;
   name: string;
+  shortBio: string;
   role: string;
   imageUrl: string;
   linkedIn: string;
   href: string;
   skills: Skill[];
+  specialties: string[];
   bio: Bio[];
 };
 
