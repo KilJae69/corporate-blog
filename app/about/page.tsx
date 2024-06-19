@@ -24,6 +24,7 @@ export default function AboutPage() {
               className="absolute inset-0 size-full object-cover"
               src={"/images/about-image-2.avif"}
               fill
+              priority
               sizes="(min-width: 1500px) 640px, (min-width: 1040px) 41.82vw, (min-width: 780px) calc(50vw - 32px), calc(100vw - 32px)"
               alt="Collaboration image"
             />

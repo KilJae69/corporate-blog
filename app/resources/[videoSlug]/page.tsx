@@ -1,11 +1,12 @@
 import ShareLinks from "@/components/share-links";
 import SubHeader from "@/components/shared/sub-header";
 import VideoCard from "@/components/video-card";
-import YouTubeEmbed from "@/components/youtube-embed";
+
 import { videosData } from "@/constants/data";
 import { generateSlug } from "@/lib/utils";
 import { format } from "date-fns";
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -40,6 +41,8 @@ export function generateStaticParams() {
 
   return paths;
 }
+
+const YouTubeEmbed = dynamic(() => import("@/components/youtube-embed"), { ssr: false });
 
 export default function SingleVideoPage({ params }: SingleVideoPageProps) {
   const video = videosData.find((video) => video.slug === params.videoSlug);
