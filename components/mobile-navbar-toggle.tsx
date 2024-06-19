@@ -12,7 +12,6 @@ type MobileNavbarToggleProps = {
 export default function MobileNavbarToggle({ close }: MobileNavbarToggleProps) {
   const { toggleNavbar } = useNavbarStore();
   const [isHovered, setIsHovered] = useState(false);
-  
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -25,6 +24,7 @@ export default function MobileNavbarToggle({ close }: MobileNavbarToggleProps) {
   if (close) {
     return (
       <button
+        role="button"
         onClick={toggleNavbar}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -43,10 +43,8 @@ export default function MobileNavbarToggle({ close }: MobileNavbarToggleProps) {
   }
 
   return (
-    <button onClick={toggleNavbar}>
-      <IoMenuOutline
-        className={`size-8 text-white`}
-      />
+    <button role="button" onClick={toggleNavbar}>
+      <IoMenuOutline className={`size-8 text-white`} />
     </button>
   );
 }
