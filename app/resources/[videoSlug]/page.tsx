@@ -51,7 +51,7 @@ export default function SingleVideoPage({ params }: SingleVideoPageProps) {
     return notFound();
   }
 
-  const { title, createdAt, author, authorImg } = video;
+  const { title, createdAt, author, authorImg,videoUrl } = video;
 
   const formatedDate = format(new Date(createdAt), "MMMM dd, yyyy");
   return (
@@ -96,7 +96,7 @@ export default function SingleVideoPage({ params }: SingleVideoPageProps) {
           </aside>
           <div>
             <article className="relative flex translate-y-[-150px] flex-col gap-6 text-[1rem] leading-8 text-[#5a5a67]">
-              <YouTubeEmbed videoUrl={video.videoUrl} />
+              <YouTubeEmbed videoUrl={videoUrl} />
               <p>{video.description}</p>
             </article>
           </div>
