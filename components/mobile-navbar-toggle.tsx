@@ -24,7 +24,7 @@ export default function MobileNavbarToggle({ close }: MobileNavbarToggleProps) {
   if (close) {
     return (
       <button
-        role="button"
+        aria-label="Toggle Navbar"
         onClick={toggleNavbar}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -43,7 +43,7 @@ export default function MobileNavbarToggle({ close }: MobileNavbarToggleProps) {
   }
 
   return (
-    <button role="button" onClick={toggleNavbar}>
+    <button aria-label="Toggle Navbar" role="button" onClick={toggleNavbar}>
       <IoMenuOutline className={`size-8 text-white`} />
     </button>
   );
