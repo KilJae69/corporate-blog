@@ -6,10 +6,9 @@ import TextCircle from "./text-circle";
 import { MotionH1, MotionSpan } from "./shared/framer";
 import Image from "next/image";
 
-
 export default function HeroSection() {
   const ref = useInViewHeroSection();
-  
+
   return (
     <section ref={ref} id="hero" className=" mb-auto">
       <div className="relative h-[70%] px-4 pb-14 pt-[calc(50px+var(--header-height))] md:px-8 md:pb-24 lg:px-16 xl:pb-32">
@@ -17,25 +16,21 @@ export default function HeroSection() {
           src="/images/bg-image.webp"
           alt="Hero Background"
           fill
-          priority         
+          priority
           sizes="100vw"
           className="object-cover"
           quality={30}
-        /> 
+        />
         <div className="absolute inset-0 bg-primary/70"></div>
         <div className="container relative flex flex-col gap-8">
-          <MotionH1
-          
-          className="font-bold">
-            <MotionSpan
-           
-             className="gradient-text text-clamp-max-xl">
+          <MotionH1 className="font-bold">
+            <MotionSpan className="gradient-text text-clamp-max-xl">
               Your Vision.
             </MotionSpan>{" "}
             <br />
-            <MotionSpan
-          
-            className="gradient-text text-clamp-max-xl">Our bytes.</MotionSpan>
+            <MotionSpan className="gradient-text text-clamp-max-xl">
+              Our bytes.
+            </MotionSpan>
           </MotionH1>
 
           {/* <p className="text-clamp-xs mt-8 text-white xs:max-w-[50%] xl:absolute xl:left-[60%] xl:top-[10%] xl:max-w-[40%]">
