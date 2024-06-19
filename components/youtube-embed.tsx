@@ -17,7 +17,7 @@ function YouTubeEmbed({ videoUrl }: YouTubeEmbedProps) {
   };
 
   return (
-    <div className="relative aspect-video overflow-hidden bg-black">
+    <div className="relative aspect-video overflow-hidden bg-primary">
       {!isPlayerVisible ? (
         <div
           className="absolute inset-0 flex cursor-pointer items-center justify-center"
@@ -26,11 +26,12 @@ function YouTubeEmbed({ videoUrl }: YouTubeEmbedProps) {
           <Image
             src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
             alt="Video thumbnail"
+            sizes="(min-width: 1040px) 306px, (min-width: 480px) calc(47.04vw - 44px), calc(100vw - 96px)"
             priority
             className="object-cover"
             fill
           />
-          <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+          <div className="absolute inset-0 flex items-center justify-center bg-primary/50">
             <button className="rounded-2xl bg-red-600 px-8 py-2 text-white">
               ▶
             </button>
