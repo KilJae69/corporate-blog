@@ -3,9 +3,11 @@ import SubHeader from "@/components/shared/sub-header";
 import VideoCard from "@/components/video-card";
 import YouTubeEmbed from "@/components/youtube-embed";
 import { videosData } from "@/constants/data";
+import { generateSlug } from "@/lib/utils";
 import { format } from "date-fns";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 type SingleVideoPageProps = {
@@ -54,7 +56,7 @@ export default function SingleVideoPage({ params }: SingleVideoPageProps) {
       <SubHeader>
         <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-10 px-4 pb-20 text-start md:px-8  lg:px-16 ">
           <h1 className="text-clamp-lg     font-bold text-white">{title}</h1>
-          <div className="flex items-center gap-4 text-xs text-[#ccd1d9] md:text-lg xl:text-xl">
+          <Link href={`/about/${generateSlug(author)}`} className="flex items-center gap-4 text-xs text-[#ccd1d9] md:text-lg xl:text-xl">
             <Image
               src={authorImg}
               width={40}
@@ -65,17 +67,17 @@ export default function SingleVideoPage({ params }: SingleVideoPageProps) {
             <span className=" font-semibold text-accent ">{author}</span>{" "}
             <span>&diams;</span>
             <span className="">{formatedDate}</span>
-          </div>
+          </Link>
         </div>
       </SubHeader>
       <section className="relative   bg-lightBg px-4 pt-20 md:px-8 lg:px-16">
         <div className="relative mx-auto flex max-w-7xl flex-col-reverse gap-10 lg:flex-row-reverse lg:gap-20">
           <aside className="sticky top-4 flex translate-y-[-150px] flex-col gap-8 overflow-hidden bg-white p-8 shadow-md lg:min-w-[370px]">
-            <h3 className="text-xl font-semibold text-primary">
+            <span className="text-xl font-semibold text-primary">
               Share this on
-            </h3>
+            </span>
             <ShareLinks />
-            <h3 className="text-xl font-semibold text-primary">Most Popular</h3>
+            <span className="text-xl font-semibold text-primary">Most Popular</span>
             <ul className="grid gap-5  xs:grid-cols-2 lg:grid-cols-1">
               {videosData.map((video, index) => {
                 if (index < 2)

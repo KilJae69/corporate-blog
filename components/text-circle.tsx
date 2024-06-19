@@ -4,7 +4,11 @@ import { FaArrowDown } from "react-icons/fa6";
 
 export default function TextCircle() {
   return (
-    <Link href={"#what-we-do"} className="relative block w-max hover:cursor-pointer">
+    <Link
+      href={"#what-we-do"}
+      aria-label="Scroll down to the next section"
+      className="relative block w-max hover:cursor-pointer"
+    >
       <svg
         className="relative size-[150px] animate-spin-slow  md:size-[200px] lg:size-[250px]"
         viewBox="0 0 250 250"

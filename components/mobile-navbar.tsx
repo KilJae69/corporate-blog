@@ -1,5 +1,5 @@
 "use client";
-import { navbarLinks } from "@/constants/data";
+import {  navbarMobileLinks } from "@/constants/data";
 import Logo from "./shared/logo";
 import MobileNavbarToggle from "./mobile-navbar-toggle";
 import Link from "next/link";
@@ -31,7 +31,7 @@ export default function MobileNavbar() {
       </div>
       <nav className="mt-16">
         <ul className="flex flex-col gap-4 border-b-white text-2xl font-semibold text-[#ccd1d9]">
-          {navbarLinks.map((link) => (
+          {navbarMobileLinks.map((link) => (
             <li
               onClick={toggleNavbar}
               className="group flex items-center gap-5"

@@ -1,7 +1,7 @@
 import { FaPaperPlane } from "react-icons/fa6";
 import { Separator } from "./ui/separator";
 import SocialLinks from "./shared/social-links";
-import { navbarLinks } from "@/constants/data";
+import {  navbarMobileLinks } from "@/constants/data";
 import Link from "next/link";
 
 const Footer = () => {
@@ -36,7 +36,7 @@ const Footer = () => {
 
           <nav className="hidden md:block">
             <ul className="flex gap-5 font-semibold ">
-              {navbarLinks.map((link) => (
+              {navbarMobileLinks.map((link) => (
                 <li
                   className="text-white transition-colors hover:text-accent"
                   key={link.id}

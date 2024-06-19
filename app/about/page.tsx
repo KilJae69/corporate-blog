@@ -54,7 +54,7 @@ export default function AboutPage() {
         </div>
       </section>
       <MarqueeBanner text="We help realize business ideas" />
-      <section className="bg-lightBg px-4 pb-24  md:px-10 md:pb-44 ">
+      <section className="bg-lightBg px-4 pb-10  md:px-10 md:pb-20 ">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 md:gap-14">
           <h2 className="text-xs font-semibold uppercase text-primary md:text-lg xl:text-xl">
             Meet our team

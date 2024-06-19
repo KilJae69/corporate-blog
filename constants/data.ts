@@ -14,6 +14,22 @@ export const navbarLinks = [
   },
   { id: 3, title: "Resources", href: "/resources" },
   { id: 4, title: "Blog", href: "/blog" },
+ 
+] as const;
+
+export const navbarMobileLinks = [
+  {
+    id: 1,
+    title: "Home",
+    href: "/",
+  },
+  {
+    id: 2,
+    title: "About",
+    href: "/about",
+  },
+  { id: 3, title: "Resources", href: "/resources" },
+  { id: 4, title: "Blog", href: "/blog" },
   { id: 5, title: "Contact Us", href: "/contact" },
 ] as const;
 

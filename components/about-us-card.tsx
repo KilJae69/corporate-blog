@@ -23,7 +23,7 @@ export default function AboutUsCard({
       )}
     >
       <Image
-        className="object-cover"
+        className="scale-105 object-cover transition-all duration-500 group-hover:scale-100"
         src={imageUrl}
         sizes="(min-width: 2520px) 550px, (min-width: 1280px) calc(22.7vw - 18px), (min-width: 1040px) calc(47.27vw - 46px), (min-width: 660px) 45.56vw, (min-width: 620px) calc(-1280vw + 8486px), 94vw"
         alt={`Service ${title} image`}

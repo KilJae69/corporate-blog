@@ -4,8 +4,9 @@ import "./globals.css";
 import React from "react";
 
 import MobileNavbar from "@/components/mobile-navbar";
-import Header from "@/components/Header";
+
 import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,8 @@ export const metadata: Metadata = {
   description:
     "Your Vision. Our Bytes. Bring your start up or company vision! You bring the Why, we can help on the How. Get in touch What We Do Fractional CIO/CTO Technology is constantly evolving and, just like your business, must be … Home Read More »",
 };
+
+const Header = dynamic(() => import("@/components/Header"), { ssr: false });
 
 export default function RootLayout({
   children,

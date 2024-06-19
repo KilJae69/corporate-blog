@@ -149,6 +149,7 @@ export default function CommentForm({ className }: ProfileFormProps) {
                 </FormLabel>
                 <FormControl>
                   <Checkbox
+                    aria-label="Save info for next time"
                     className="bg-transparent text-sm"
                     checked={field.value}
                     onCheckedChange={field.onChange}
