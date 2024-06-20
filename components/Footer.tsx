@@ -1,7 +1,7 @@
 import { FaPaperPlane } from "react-icons/fa6";
 import { Separator } from "./ui/separator";
 import SocialLinks from "./shared/social-links";
-import {  navbarMobileLinks } from "@/constants/data";
+import { navbarMobileLinks } from "@/constants/data";
 import Link from "next/link";
 import SubscribeForm from "./subscribe-form";
 
@@ -17,7 +17,6 @@ const Footer = () => {
             Get the best blog stories into your inbox!
           </p>
           <div className="flex w-full flex-col items-center gap-4 xs:h-14 xs:flex-row xs:gap-0">
-            
             <SubscribeForm />
           </div>
         </div>
@@ -40,7 +39,7 @@ const Footer = () => {
             </ul>
           </nav>
 
-          <small className="mt-5 text-xs text-white">
+          <small className="mt-5 text-center text-xs text-white">
             Copyright © 2023 Teric Technolgy LLC. All Rights Reserved | Sitemap
           </small>
         </div>

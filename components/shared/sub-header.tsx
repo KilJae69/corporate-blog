@@ -14,7 +14,7 @@ export default function SubHeader({ title, children }: SubHeaderProps) {
   return (
     <div
       ref={ref}
-      className=" relative min-h-[30%] w-full pb-16 pt-[calc(50px+var(--header-height))]"
+      className=" relative min-h-[30%] w-full bg-primary pb-16 pt-[calc(50px+var(--header-height))]"
     >
       <Image
         src="/images/main-background.jpg"

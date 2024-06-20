@@ -12,7 +12,7 @@ export default function HeroSection() {
 
   return (
     <section ref={ref} id="hero" className=" mb-auto">
-      <div className="relative h-[70%] px-4 pb-14 pt-[calc(50px+var(--header-height))] md:px-8 md:pb-24 lg:px-16 xl:pb-32">
+      <div className="relative h-[70%] bg-primary px-4 pb-14 pt-[calc(50px+var(--header-height))] md:px-8 md:pb-24 lg:px-16 xl:pb-32">
         <Image
           src="/images/bg-image.webp"
           alt="Hero Background"
