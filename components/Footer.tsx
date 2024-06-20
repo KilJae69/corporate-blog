@@ -3,6 +3,7 @@ import { Separator } from "./ui/separator";
 import SocialLinks from "./shared/social-links";
 import {  navbarMobileLinks } from "@/constants/data";
 import Link from "next/link";
+import SubscribeForm from "./subscribe-form";
 
 const Footer = () => {
   return (
@@ -16,16 +17,8 @@ const Footer = () => {
             Get the best blog stories into your inbox!
           </p>
           <div className="flex w-full flex-col items-center gap-4 xs:h-14 xs:flex-row xs:gap-0">
-            <input
-              type="text"
-              placeholder="Enter your email address"
-              className="w-full flex-1 bg-primaryAccent p-4 text-white outline-none focus:bg-primaryAccent/50 active:bg-primaryAccent/50"
-            />
-            <button className="group relative flex min-h-14 max-w-[155px] items-center justify-center gap-2 bg-primaryAccent px-5 uppercase text-white transition-all hover:text-accent ">
-              <span className="absolute left-0 h-4/5 w-px bg-primaryAccent " />
-              <FaPaperPlane className="size-3 text-white transition-all group-hover:text-accent" />
-              Subscribe
-            </button>
+            
+            <SubscribeForm />
           </div>
         </div>
 
