@@ -16,8 +16,8 @@ export default function BlogPage() {
       <SubHeader title="Blog" />
       <section className=" bg-lightBg px-4 py-20 md:px-10 md:pb-24">
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3">
-          {blogPostsData.map((blog) => (
-            <BlogCard key={blog.id} {...blog} />
+          {blogPostsData.map((blog,index) => (
+            <BlogCard key={blog.id} {...blog} isFirst={index === 0}/>
           ))}
         </div>
       </section>

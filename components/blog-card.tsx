@@ -13,7 +13,8 @@ export default function BlogCard({
   author,
   title,
   slug,
-}: BlogCardProps) {
+  isFirst,
+}: BlogCardProps & { isFirst?: boolean }) {
   const formatedDate = format(new Date(createdAt), "MMMM dd, yyyy");
 
   return (
@@ -25,6 +26,7 @@ export default function BlogCard({
         src={images[0]}
         alt=""
         fill
+        priority={isFirst}
         sizes="(min-width: 1440px) 405px, (min-width: 1040px) 27.89vw, (min-width: 780px) calc(50vw - 56px), (min-width: 640px) calc(50vw - 32px), (min-width: 580px) 500px, 89.23vw"
         className="object-cover transition-transform duration-300 group-hover:scale-105"
       />
