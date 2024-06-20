@@ -6,6 +6,7 @@ import TextCircle from "./text-circle";
 import { MotionH1, MotionSpan } from "./shared/framer";
 import Image from "next/image";
 
+
 export default function HeroSection() {
   const ref = useInViewHeroSection();
 

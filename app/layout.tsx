@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import MobileNavbar from "@/components/mobile-navbar";
 
@@ -38,6 +39,7 @@ export default function RootLayout({
         <MobileNavbar />
         <main className="">{children}</main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
