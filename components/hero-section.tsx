@@ -3,7 +3,7 @@
 import useInViewHeroSection from "@/hooks/useInViewHeroSection";
 import MarqueeBanner from "./shared/marquee-banner";
 import TextCircle from "./text-circle";
-import { MotionH1, MotionSpan } from "./shared/framer";
+
 import Image from "next/image";
 
 
@@ -24,15 +24,15 @@ export default function HeroSection() {
         />
         <div className="absolute inset-0 bg-primary/70"></div>
         <div className="container relative flex flex-col gap-8">
-          <MotionH1 className="font-bold">
-            <MotionSpan className="gradient-text text-clamp-max-xl">
+          <h1 className="font-bold">
+            <span className="gradient-text text-clamp-max-xl">
               Your Vision.
-            </MotionSpan>{" "}
+            </span>{" "}
             <br />
-            <MotionSpan className="gradient-text text-clamp-max-xl">
+            <span className="gradient-text text-clamp-max-xl">
               Our bytes.
-            </MotionSpan>
-          </MotionH1>
+            </span>
+          </h1>
 
           {/* <p className="text-clamp-xs mt-8 text-white xs:max-w-[50%] xl:absolute xl:left-[60%] xl:top-[10%] xl:max-w-[40%]">
             Bring your start up or company vision! You bring the Why, we can
